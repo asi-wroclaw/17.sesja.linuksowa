@@ -27,16 +27,22 @@ const AboutUs = () => {
       title: "Nasz cel"
     }
   ];
-  return <Box width="100%" bg={theme.colors.primary} minHeight="70vh" opacity="90%">
+  return <Box
+    display="flex"
+    justifyContent="center"
+    width="100%"
+    bg={theme.colors.primary}
+    minHeight="70vh"
+    opacity="90%">
     <Stack
+      width="95%"
       marginY="auto"
       rowGap="20"
       columnGap="5"
       marginX={{ base: "2%", md: "20%", lg: "0" }}
       justifyContent="space-between"
       alignItems="center"
-      direction={{ base: 'column', lg: 'row' }}
-      paddingY="10">
+      direction={{ base: 'column', lg: 'row' }}>
       {content.map(({ image, text, title }) =>
         <ImageItem key={title} title={title} imageSrc={image} text={text} />
       )}
