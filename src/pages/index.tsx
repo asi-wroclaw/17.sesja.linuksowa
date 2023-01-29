@@ -2,12 +2,14 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import HeadSlice from '../slices/HeadSlice';
 import AboutUs from '../slices/AboutUs';
+import PreviousEditions from '../slices/PreviousEditions';
 
 const inter = Inter({ subsets: ['latin'] })
 
 const Main = () => <main>
   <HeadSlice />
   <AboutUs />
+  <PreviousEditions />
 </main>
 
 export default function Home() {
