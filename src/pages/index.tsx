@@ -6,6 +6,7 @@ import config from "../config";
 import Agenda from "../slices/agenda/Index";
 import PreviousEdition from "@/slices/PreviousEdition";
 import Contact from "@/slices/Contact";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ const Main = () => (
     {config.SEND_MESSAGE_URL && (
       <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
     )}
+    <ParticlesBackground />
   </main>
 );
 

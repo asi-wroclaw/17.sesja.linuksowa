@@ -27,12 +27,15 @@ const AboutUs = () => {
   ];
   return (
     <Box
+      as="section"
       display="flex"
       justifyContent="center"
       width="100%"
       bg={theme.colors.primary}
       minHeight="70vh"
       opacity="90%"
+      position="relative"
+      zIndex="2"
     >
       <Stack
         width="95%"
