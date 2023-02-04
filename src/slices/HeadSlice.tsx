@@ -12,7 +12,6 @@ const HeadContainerStyle: StyleProps = {
   height: "100vh",
   width: "100%",
   bg: "#000000",
-  opacity: "90%",
 };
 
 const NavBarStyle: StyleProps = {
@@ -103,9 +102,8 @@ const HeadDescription = () => (
 
 const HeadSlice = () => {
   return (
-    <Box {...HeadContainerStyle} m={0}>
+    <Box as="section" {...HeadContainerStyle} m={0}>
       <NavBar />
-      <ParticlesBackground />
       <Stack
         height="inherit"
         justifyContent="space-evenly"
@@ -113,6 +111,7 @@ const HeadSlice = () => {
         position="absolute"
         width="100%"
         top="0"
+        zIndex="2"
       >
         <Show below="lg">
           <VStack

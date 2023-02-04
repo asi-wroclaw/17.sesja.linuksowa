@@ -4,6 +4,7 @@ import HeadSlice from "../slices/HeadSlice";
 import AboutUs from "../slices/AboutUs";
 import config from "../config";
 import Agenda from "../slices/agenda/Index";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,7 @@ const Main = () => (
     <HeadSlice />
     <AboutUs />
     {config.SHOW_AGENDA && <Agenda />}
+    <ParticlesBackground />
   </main>
 );
 
