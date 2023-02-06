@@ -1,14 +1,6 @@
-import { Button } from "@chakra-ui/react";
+import { Button, ButtonProps } from "@chakra-ui/react";
 
-interface DefaultButtonProps {
-  text: string;
-  color?: string;
-  bg?: string;
-  variant?: string;
-  size?: string;
-}
-
-const DefaultButton = (props: DefaultButtonProps) => {
+const DefaultButton = (props: ButtonProps & { text: string }) => {
   const { text } = props;
   const buttonProps = {
     size: "lg",
@@ -16,7 +8,7 @@ const DefaultButton = (props: DefaultButtonProps) => {
     bg: "#6F2DBD",
     color: "white",
     ...props
-  } satisfies DefaultButtonProps;
+  };
   return (
     <Button {...buttonProps}>
       {text}
