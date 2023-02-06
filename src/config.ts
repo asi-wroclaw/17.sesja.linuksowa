@@ -8,6 +8,6 @@ const appConfig = z.object({
   ),
 });
 
-const config = appConfig.parse(getConfig().publicRuntimeConfig);
+const config = appConfig.parse(getConfig().publicRuntimeConfig || {});
 
 export default config;
