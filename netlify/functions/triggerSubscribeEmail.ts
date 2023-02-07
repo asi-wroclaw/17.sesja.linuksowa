@@ -24,7 +24,7 @@ const handler: Handler = async function (event) {
     method: "POST",
     body: JSON.stringify({
       from: requestBody.inviteeEmail,
-      to: "jBosak98@gmail.cpm",
+      to: "jBosak98@gmail.com",
       subject: "You've been subscribed",
       parameters: {
         name: requestBody.subscriberName,
@@ -32,7 +32,7 @@ const handler: Handler = async function (event) {
       },
     }),
   });
-
+  console.log('xdddd')
   return {
     statusCode: 200,
     body: JSON.stringify({a:"Subscribe email sent!", b}),
