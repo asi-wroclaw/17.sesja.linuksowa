@@ -7,13 +7,9 @@ const DefaultButton = (props: ButtonProps & { text: string }) => {
     variant: "solid",
     bg: "#6F2DBD",
     color: "white",
-    ...props
+    ...props,
   };
-  return (
-    <Button {...buttonProps}>
-      {text}
-    </Button>
-  );
+  return <Button {...buttonProps}>{text}</Button>;
 };
 
 export default DefaultButton;
