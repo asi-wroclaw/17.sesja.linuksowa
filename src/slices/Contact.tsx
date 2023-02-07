@@ -21,7 +21,7 @@ const Contact = () => {
       body: JSON.stringify({
         subscriberName: data.subscriberName,
         subscriberEmail: data.subscriberEmail,
-        inviteeEmail: "info@netlify.com",
+        inviteeEmail: "jbosak98@gmail.com",
       }),
     });
   };
