@@ -1,10 +1,4 @@
-import {
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
-  Box,
-} from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Textarea, Box } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import { FormEvent, useState } from "react";
 
@@ -56,7 +50,7 @@ ${message}
             required
             value={message}
             onChange={(event) => setMessage(event.target.value)}
-            size='lg' 
+            size="lg"
             placeholder="Pytania? Sugestie? Wpisz je tutaj!"
           />
           <DefaultButton
@@ -65,7 +59,8 @@ ${message}
             _hover={{ color: "black" }}
             size="lg"
             text="wyślij"
-            type="submit" />
+            type="submit"
+          />
         </FormControl>
       </form>
     </Box>
