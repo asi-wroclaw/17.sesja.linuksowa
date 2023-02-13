@@ -5,6 +5,8 @@ import {
   Textarea,
   Box,
   Heading,
+  AlertIcon,
+  Alert
 } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import { FormEvent, useState } from "react";
@@ -14,6 +16,7 @@ const Contact = ({ sendMessageUrl }: { sendMessageUrl: string }) => {
   const [name, setName] = useState<string | undefined>(undefined);
   const [email, setEmail] = useState<string | undefined>(undefined);
   const [message, setMessage] = useState<string | undefined>(undefined);
+  const [status, setStatus] = useState<'success'|'error' | undefined>(undefined);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -28,8 +31,12 @@ ${message}
     };
     try {
       const response = await fetch(sendMessageUrl, requestOptions);
+      if(response.status === 200) setStatus('success');
+      else setStatus('error');
+      console.log(response);
     } catch (err) {
       console.log(err);
+      setStatus('error');
     }
   };
 
@@ -77,6 +84,10 @@ ${message}
           />
         </FormControl>
       </form>
+      {status && <Alert status={status}>
+    <AlertIcon />
+    {status === 'success' ? 'Wiadomość wysłana!' : 'Coś poszło nie tak. Napisz na kontakt@sesja.linuksowa.pl'}
+  </Alert>}
     </Box>
   );
 };

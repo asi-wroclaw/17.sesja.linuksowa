@@ -15,7 +15,9 @@ const Main = () => (
     <AboutUs />
     <PreviousEdition />
     {config.SHOW_AGENDA && <Agenda />}
-    {config.SEND_MESSAGE_URL && <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />}
+    {config.SEND_MESSAGE_URL && (
+      <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
+    )}
   </main>
 );
 

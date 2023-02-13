@@ -14,14 +14,14 @@ const ERROR_501_RESPONSE = {
 }
 
 const handler: Handler = async (event: HandlerEvent) => {
-  const { DISCORD_HOOK_URL } = process.env;
-  if(!DISCORD_HOOK_URL) return ERROR_500_RESPONSE;
+  const { DISCORD_HOOK_URL, CORS_ORIGIN } = process.env;
+  if(!DISCORD_HOOK_URL || !CORS_ORIGIN) return ERROR_500_RESPONSE;
   if (event.httpMethod !== 'POST') return ERROR_501_RESPONSE;
 
   const headers = {
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': CORS_ORIGIN,
     'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
+    'Access-Control-Allow-Methods': 'POST'
   };
   
   let error;
