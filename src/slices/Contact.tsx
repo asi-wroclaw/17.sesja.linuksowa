@@ -2,10 +2,10 @@ import {
   FormControl,
   FormLabel,
   Input,
-  FormHelperText,
+  Textarea,
   Box,
-  Button,
 } from "@chakra-ui/react";
+import DefaultButton from "@/components/DefaultButton";
 import { FormEvent, useState } from "react";
 
 const Contact = () => {
@@ -36,30 +36,36 @@ ${message}
   };
 
   return (
-    <Box margin="auto" width="80%">
+    <Box margin="auto" width="80%" maxWidth={"800"}>
       <form onSubmit={handleSubmit}>
-        <FormControl>
-          <FormLabel>Imię i nazwisko</FormLabel>
+        <FormControl display={"flex"} flexDir="column">
+          <FormLabel mt={4}>Imię i nazwisko</FormLabel>
           <Input
             value={name}
             onChange={(event) => setName(event.target.value)}
             type="text"
           />
-          <FormLabel>Email</FormLabel>
+          <FormLabel mt={4}>Email</FormLabel>
           <Input
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="email"
           />
-          <FormLabel>Wiadomość</FormLabel>
-          <Input
+          <FormLabel mt={4}>Wiadomość</FormLabel>
+          <Textarea
+            required
             value={message}
             onChange={(event) => setMessage(event.target.value)}
-            type="text"
+            size='lg' 
+            placeholder="Pytania? Sugestie? Wpisz je tutaj!"
           />
-          <Button width="full" type="submit">
-            wyślij
-          </Button>
+          <DefaultButton
+            mt={4}
+            mb={4}
+            _hover={{ color: "black" }}
+            size="lg"
+            text="wyślij"
+            type="submit" />
         </FormControl>
       </form>
     </Box>
