@@ -36,6 +36,7 @@ jobs:
       run: |
         echo "repository variable : ${{ vars.REPOSITORY_VAR }}"
         echo "SEND_MESSAGE_URL variable : ${{ vars.SEND_MESSAGE_URL }}"
+        echo "SEND_MESSAGE_URL variable : ${{ secrets.SEND_MESSAGE_URL }}"
         echo "overridden variable : ${{ vars.OVERRIDE_VAR }}"
         echo "variable from shell environment : $env_var"
 
