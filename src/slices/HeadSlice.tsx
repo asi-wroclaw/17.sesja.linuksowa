@@ -57,7 +57,7 @@ const Title = () => {
         bgColor={theme.colors.primary}
         color="white"
       >
-        &nbsp;22-23 kwietnia 2022 Wrocław, Polska&nbsp;
+        &nbsp;22-23 kwietnia 2023 Wrocław, Polska&nbsp;
       </Heading>
     </VStack>
   );
