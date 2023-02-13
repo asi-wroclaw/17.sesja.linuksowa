@@ -36,7 +36,7 @@ const AboutUs = () => {
     >
       <Stack
         width="95%"
-        marginY={{ base: "5%", lg: 'auto' }}
+        marginY={{ base: "5%", lg: "auto" }}
         rowGap="20"
         columnGap="5"
         marginX={{ base: "2%", md: "20%", lg: "0" }}

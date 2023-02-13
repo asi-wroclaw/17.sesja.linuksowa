@@ -7,7 +7,7 @@ import { Stack, VStack, Heading } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 import { Show } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
-import config from '../config';
+import config from "../config";
 
 const HeadContainerStyle: StyleProps = {
   height: "100vh",
@@ -64,7 +64,12 @@ const Title = () => {
 };
 
 const SpotDescription = () => {
-  const spot = ['Politechnika Wrocławska', 'Budynek D-20', 'Centrum Kongresowe', 'ul. Janiszewskiego 8'];
+  const spot = [
+    "Politechnika Wrocławska",
+    "Budynek D-20",
+    "Centrum Kongresowe",
+    "ul. Janiszewskiego 8",
+  ];
   return (
     <VStack>
       {spot.map((text: string) => (
@@ -93,7 +98,7 @@ const HeadDescription = () => (
   >
     <Title />
     <SpotDescription />
-    {config.SHOW_AGENDA &&<DefaultButton text={"ZOBACZ AGENDĘ"} />}
+    {config.SHOW_AGENDA && <DefaultButton text={"ZOBACZ AGENDĘ"} />}
   </VStack>
 );
 
