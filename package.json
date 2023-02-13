@@ -14,10 +14,12 @@
     "@chakra-ui/react": "2.4.9",
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
+    "@netlify/functions": "1.4.0",
     "@next/font": "13.1.2",
     "framer-motion": "6.5.1",
     "next": "13.1.2",
     "next-sitemap": "3.1.45",
+    "node-fetch": "3.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-tsparticles": "2.7.1",
@@ -31,8 +33,7 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
-    "prettier": "2.8.3",
-    "husky": "8.0.3"
-    
+    "husky": "8.0.3",
+    "prettier": "2.8.3"
   }
 }

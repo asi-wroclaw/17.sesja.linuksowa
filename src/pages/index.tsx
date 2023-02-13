@@ -5,6 +5,7 @@ import AboutUs from "../slices/AboutUs";
 import config from "../config";
 import Agenda from "../slices/agenda/Index";
 import PreviousEdition from "@/slices/PreviousEdition";
+import Contact from "@/slices/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ const Main = () => (
     <AboutUs />
     <PreviousEdition />
     {config.SHOW_AGENDA && <Agenda />}
+    <Contact />
   </main>
 );
 
