@@ -6,6 +6,7 @@ const appConfig = z.object({
     (value) => (value === "true" ? true : false),
     z.boolean().default(false)
   ),
+  SEND_MESSAGE_URL: z.string().optional(),
 });
 
 const config = appConfig.parse(getConfig().publicRuntimeConfig || {});

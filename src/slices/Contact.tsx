@@ -1,18 +1,22 @@
-import { FormControl, FormLabel, Input, Textarea, Box, Heading } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+  Box,
+  Heading,
+} from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import { FormEvent, useState } from "react";
+import config from "@/config";
 
-const Contact = () => {
+const Contact = ({ sendMessageUrl }: { sendMessageUrl: string }) => {
   const [name, setName] = useState<string | undefined>(undefined);
   const [email, setEmail] = useState<string | undefined>(undefined);
   const [message, setMessage] = useState<string | undefined>(undefined);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const url =
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:9999/.netlify/functions/sendMessage"
-        : "";
     const requestOptions = {
       method: "POST",
       body: `
@@ -23,23 +27,24 @@ ${message}
       `,
     };
     try {
-      const response = await fetch(url, requestOptions);
+      const response = await fetch(sendMessageUrl, requestOptions);
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <Box margin="auto"  mt="300" mb="30" width="80%" maxWidth={"800"}>
-             <Heading
-              as="h2"
-              mt="300" mb="30"
-              fontSize={{ base: "4xl", md: "7xl" }}
-              textAlign="center"
-              fontWeight="semibold"
-            >
-              Napisz do nas!
-            </Heading>
+    <Box margin="auto" mt="300" mb="30" width="80%" maxWidth={"800"}>
+      <Heading
+        as="h2"
+        mt="300"
+        mb="30"
+        fontSize={{ base: "4xl", md: "7xl" }}
+        textAlign="center"
+        fontWeight="semibold"
+      >
+        Napisz do nas!
+      </Heading>
       <form onSubmit={handleSubmit}>
         <FormControl display={"flex"} flexDir="column">
           <FormLabel mt={4}>Imię i nazwisko</FormLabel>
