@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Input, Textarea, Box } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Textarea, Box, Heading } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import { FormEvent, useState } from "react";
 
@@ -30,7 +30,16 @@ ${message}
   };
 
   return (
-    <Box margin="auto" width="80%" maxWidth={"800"}>
+    <Box margin="auto"  mt="300" mb="30" width="80%" maxWidth={"800"}>
+             <Heading
+              as="h2"
+              mt="300" mb="30"
+              fontSize={{ base: "4xl", md: "7xl" }}
+              textAlign="center"
+              fontWeight="semibold"
+            >
+              Napisz do nas!
+            </Heading>
       <form onSubmit={handleSubmit}>
         <FormControl display={"flex"} flexDir="column">
           <FormLabel mt={4}>Imię i nazwisko</FormLabel>
