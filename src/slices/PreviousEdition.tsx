@@ -16,7 +16,8 @@ const PreviousEdition = () => {
   const content = {
     text: "Zobacz poprzednie prelekcje",
     buttonText: "PRZEJDŹ DO NAGRAŃ",
-    youtubeUrl: "https://www.youtube.com/embed/jMk-6SDVXC8",
+    youtubeUrl:
+      "https://www.youtube-nocookie.com/embed/videoseries?list=PLTvZBPQxCI8GGvYbi-irgyNAptXKWXJWl",
     youtubeIframeTitle: "16 Sesja Linuksowa",
     previousEditionUrl: "https://16.sesja.linuksowa.pl/",
   };
