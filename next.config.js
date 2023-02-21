@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+const nextTranslate = require('next-translate')
+
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   images:{
     unoptimized: true
   },
@@ -10,4 +14,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+module.exports =  { ...nextConfig, ...nextTranslate() };
