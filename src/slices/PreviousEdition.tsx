@@ -9,17 +9,16 @@ import {
   Link,
   AspectRatio,
 } from "@chakra-ui/react";
+import useTranslation from "next-translate/useTranslation";
 
 const PreviousEdition = () => {
-  const theme = useTheme();
-
+  const { t } = useTranslation("common");
   const content = {
-    text: "Zobacz poprzednie prelekcje",
-    buttonText: "PRZEJDŹ DO NAGRAŃ",
-    youtubeUrl:
-      "https://www.youtube-nocookie.com/embed/videoseries?list=PLTvZBPQxCI8GGvYbi-irgyNAptXKWXJWl",
-    youtubeIframeTitle: "16 Sesja Linuksowa",
-    previousEditionUrl: "https://16.sesja.linuksowa.pl/",
+    text: t("seeLastEdition"),
+    buttonText: t("goToRecordings"),
+    youtubeUrl: t("ytPlaylist"),
+    youtubeIframeTitle: t("youtubeIframeTitle"),
+    previousEditionUrl: t("previousEditionUrl"),
   };
 
   return (
@@ -40,6 +39,7 @@ const PreviousEdition = () => {
         width="95%"
         marginY={{ base: "5%", lg: "auto" }}
         direction={{ base: "column", lg: "row" }}
+        gap="5px"
       >
         <Center flex={1}>
           <VStack spacing="3em">

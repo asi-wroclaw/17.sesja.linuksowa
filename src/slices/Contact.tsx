@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import { FormEvent, useState } from "react";
-import config from "@/config";
+import useTranslation from "next-translate/useTranslation";
 
 const Contact = ({ sendMessageUrl }: { sendMessageUrl: string }) => {
   const [name, setName] = useState<string | undefined>(undefined);
@@ -19,6 +19,7 @@ const Contact = ({ sendMessageUrl }: { sendMessageUrl: string }) => {
   const [status, setStatus] = useState<"success" | "error" | undefined>(
     undefined
   );
+  const { t } = useTranslation("common");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -59,36 +60,36 @@ ${message}
         textAlign="center"
         fontWeight="semibold"
       >
-        Napisz do nas!
+        {t("writeToUs")}
       </Heading>
       <form onSubmit={handleSubmit}>
         <FormControl display={"flex"} flexDir="column">
-          <FormLabel mt={4}>Imię i nazwisko</FormLabel>
+          <FormLabel mt={4}>{t("formName")}</FormLabel>
           <Input
             value={name}
             onChange={(event) => setName(event.target.value)}
             type="text"
           />
-          <FormLabel mt={4}>Email</FormLabel>
+          <FormLabel mt={4}>{t("email")}</FormLabel>
           <Input
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="email"
           />
-          <FormLabel mt={4}>Wiadomość</FormLabel>
+          <FormLabel mt={4}>{t("message")}</FormLabel>
           <Textarea
             required
             value={message}
             onChange={(event) => setMessage(event.target.value)}
             size="lg"
-            placeholder="Pytania? Sugestie? Wpisz je tutaj!"
+            placeholder={t("formPlaceholder")}
           />
           <DefaultButton
             mt={4}
             mb={4}
             _hover={{ color: "black" }}
             size="lg"
-            text="wyślij"
+            text="send"
             type="submit"
           />
         </FormControl>
@@ -97,8 +98,8 @@ ${message}
         <Alert status={status}>
           <AlertIcon />
           {status === "success"
-            ? "Wiadomość wysłana!"
-            : "Coś poszło nie tak. Napisz na kontakt@sesja.linuksowa.pl"}
+            ? t("messageSendSuccess")
+            : t("messageSendFailed")}
         </Alert>
       )}
     </Box>

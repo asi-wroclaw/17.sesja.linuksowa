@@ -1,7 +1,10 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
+import useTranslation from "next-translate/useTranslation";
 
 const DefaultButton = (props: ButtonProps & { text: string }) => {
+  const { t } = useTranslation("common");
   const { text } = props;
+  const translatedText = t(text);
   const buttonProps = {
     size: "lg",
     variant: "solid",
@@ -9,7 +12,7 @@ const DefaultButton = (props: ButtonProps & { text: string }) => {
     color: "white",
     ...props,
   };
-  return <Button {...buttonProps}>{text}</Button>;
+  return <Button {...buttonProps}>{translatedText}</Button>;
 };
 
 export default DefaultButton;

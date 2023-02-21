@@ -4,25 +4,27 @@ import coTo from "../assets/aboutUs/coTo.png";
 import jakWyglada from "../assets/aboutUs/jakWyglada.png";
 import { useTheme } from "@chakra-ui/react";
 import ImageItem from "@/components/ImageItem";
+import useTranslation from "next-translate/useTranslation";
 
 const AboutUs = () => {
   const theme = useTheme();
+  const { t } = useTranslation("common");
 
   const content = [
     {
       image: coTo,
-      text: "Jest to największa w Polsce konferencja poświęcona rozwiązaniom Open Source oraz najnowszym trendom w systemach z rodziny GNU/Linux.",
-      title: "CZYM JEST SESJA?",
+      text: t("aboutUsWhatIsText"),
+      title: t("aboutUsWhatIsTitle"),
     },
     {
       image: jakWyglada,
-      text: "Udział w Sesji jest darmowy. Co roku na konferencji spotykają się pasjonaci informatyki z całej Polski, aby pogłębić swoją wiedzę i podjąć dyskusję w interesujących ich dziedzinach.",
-      title: "Jak to wygląda?",
+      text: t("howItLooksLiketext"),
+      title: t("howItLooksLikeTitle"),
     },
     {
       image: cel,
-      text: "Naszym celem jest promowanie idei wolnego oprogramowania. Wiemy, że Open Source jest coraz bardziej popularny w rozwiązaniach komercyjnych, jak i domowych. I zależy nam na jego popularyzacji.",
-      title: "Nasz cel",
+      text: t("ourGoalText"),
+      title: t("ourGoalTitle"),
     },
   ];
   return (

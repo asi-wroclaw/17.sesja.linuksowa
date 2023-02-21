@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import dynamic from "next/dynamic";
 import { Flex, Heading, Box } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import useTranslation from "next-translate/useTranslation";
 
 const Space = ({ text }: { text?: string }) => {
   const theme = useTheme();
@@ -29,6 +30,8 @@ const Space = ({ text }: { text?: string }) => {
   );
 };
 const MapSlice = () => {
+  const { t } = useTranslation("common");
+
   const Map = useMemo(
     () =>
       dynamic(() => import("../components/Map"), {
@@ -39,7 +42,7 @@ const MapSlice = () => {
   );
   return (
     <Box as="section">
-      <Space text={"Miejsce wydarzenia"} />
+      <Space text={t("eventLocation")} />
       <Box position="relative" zIndex="2">
         <Map />
       </Box>

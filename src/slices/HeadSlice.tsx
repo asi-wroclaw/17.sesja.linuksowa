@@ -1,4 +1,4 @@
-import { Box, StyleProps, Button } from "@chakra-ui/react";
+import { Box, StyleProps, Button, Flex } from "@chakra-ui/react";
 import ParticlesBackground from "../components/ParticlesBackground";
 import Image from "next/image";
 import logo from "../assets/logo-duze-pl.png";
@@ -8,6 +8,8 @@ import { useTheme } from "@chakra-ui/react";
 import { Show } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import config from "../config";
+import useTranslation from "next-translate/useTranslation";
+import Lang from "@/components/Lang";
 
 const HeadContainerStyle: StyleProps = {
   height: "100vh",
@@ -21,21 +23,24 @@ const NavBarStyle: StyleProps = {
   opacity: "90%",
   position: "absolute",
   width: "100%",
+  zIndex: "3",
 };
 
 const NavBar = () => {
   return (
     <Box {...NavBarStyle}>
       {" "}
-      <Box mt="3" ml="5">
+      <Flex mt="3" ml="5" height="40px" justifyContent="space-between">
         <Image alt="sesja linuksowa" height="40" src={logo} />
-      </Box>
+        <Lang />
+      </Flex>
     </Box>
   );
 };
 
 const Title = () => {
   const theme = useTheme();
+  const { t } = useTranslation("common");
 
   return (
     <VStack>
@@ -46,7 +51,7 @@ const Title = () => {
         fontWeight="semibold"
         color="white"
       >
-        17 Sesja Linuksowa
+        {t("title")}
       </Heading>
       <Heading
         as="h2"
@@ -56,19 +61,16 @@ const Title = () => {
         bgColor={theme.colors.primary}
         color="white"
       >
-        &nbsp;22-23 kwietnia 2023 Wrocław, Polska&nbsp;
+        &nbsp;{t("eventDate")}&nbsp;
       </Heading>
     </VStack>
   );
 };
 
 const SpotDescription = () => {
-  const spot = [
-    "Politechnika Wrocławska",
-    "Budynek D-20",
-    "Centrum Kongresowe",
-    "ul. Janiszewskiego 8",
-  ];
+  const { t } = useTranslation("common");
+
+  const spot: string[] = t("eventLocationDetails", {}, { returnObjects: true });
   return (
     <VStack>
       {spot.map((text: string) => (
@@ -88,18 +90,21 @@ const SpotDescription = () => {
   );
 };
 
-const HeadDescription = () => (
-  <VStack
-    height="inherit"
-    margin="0"
-    width={{ base: "100%", lg: "50%" }}
-    justifyContent="space-evenly"
-  >
-    <Title />
-    <SpotDescription />
-    {config.SHOW_AGENDA && <DefaultButton text={"ZOBACZ AGENDĘ"} />}
-  </VStack>
-);
+const HeadDescription = () => {
+  const { t } = useTranslation("common");
+  return (
+    <VStack
+      height="inherit"
+      margin="0"
+      width={{ base: "100%", lg: "50%" }}
+      justifyContent="space-evenly"
+    >
+      <Title />
+      <SpotDescription />
+      {config.SHOW_AGENDA && <DefaultButton text={t("seeAgenda")} />}
+    </VStack>
+  );
+};
 
 const HeadSlice = () => {
   return (
