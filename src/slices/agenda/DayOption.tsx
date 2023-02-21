@@ -17,7 +17,9 @@ const DayOption = ({ selected = false, text, select }: DayOptionProps) => {
       role="group"
       cursor="pointer"
       onClick={select}
-      height="10"
+      paddingTop="5"
+      paddingBottom="1"
+      height={["90px", "60px"]}
       width="45%"
       {...borderBottom}
     >
