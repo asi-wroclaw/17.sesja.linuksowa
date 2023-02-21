@@ -39,6 +39,7 @@ const PreviousEdition = () => {
         width="95%"
         marginY={{ base: "5%", lg: "auto" }}
         direction={{ base: "column", lg: "row" }}
+        gap="5px"
       >
         <Center flex={1}>
           <VStack spacing="3em">
