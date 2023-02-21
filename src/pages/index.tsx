@@ -6,20 +6,27 @@ import config from "../config";
 import Agenda from "../slices/agenda/Index";
 import PreviousEdition from "@/slices/PreviousEdition";
 import Contact from "@/slices/Contact";
+import Map from "../slices/Map";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Main = () => (
-  <main>
-    <HeadSlice />
-    <AboutUs />
-    <PreviousEdition />
-    {config.SHOW_AGENDA && <Agenda />}
-    {config.SEND_MESSAGE_URL && (
-      <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
-    )}
-  </main>
-);
+const Main = () => {
+  return (
+    <main>
+      <HeadSlice />
+      <AboutUs />
+      <PreviousEdition />
+      {config.SHOW_AGENDA && <Agenda />}
+      <Map />
+      {config.SEND_MESSAGE_URL && (
+        <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
+      )}
+
+      <ParticlesBackground />
+    </main>
+  );
+};
 
 export default function Home() {
   return (

@@ -42,10 +42,18 @@ ${message}
   };
 
   return (
-    <Box margin="auto" mt="300" mb="30" width="80%" maxWidth={"800"}>
+    <Box
+      as="section"
+      position="relative"
+      zIndex="2"
+      margin="auto"
+      mt="10"
+      mb="30"
+      width="80%"
+      maxWidth={"800"}
+    >
       <Heading
         as="h2"
-        mt="300"
         mb="30"
         fontSize={{ base: "4xl", md: "7xl" }}
         textAlign="center"
