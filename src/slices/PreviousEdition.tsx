@@ -24,6 +24,9 @@ const PreviousEdition = () => {
 
   return (
     <Box
+      as="section"
+      position="relative"
+      zIndex="2"
       display="flex"
       width="100%"
       bg="whiteAlpha.900"
@@ -31,6 +34,7 @@ const PreviousEdition = () => {
       opacity="90%"
       alignItems="center"
       justifyContent="center"
+      mb="50"
     >
       <Flex
         width="95%"
