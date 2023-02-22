@@ -80,6 +80,7 @@ const SpotDescription = () => {
           fontSize={{ base: "xl", md: "3xl" }}
           lineHeight={{ base: "1em", lg: "2em" }}
           fontWeight="semibold"
+          textAlign="center"
           mt={0}
           color="white"
         >
