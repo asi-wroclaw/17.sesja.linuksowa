@@ -56,7 +56,7 @@ ${message}
       <Heading
         as="h2"
         mb="30"
-        fontSize={{ base: "4xl", md: "7xl" }}
+        fontSize={["3xl", "5xl", "7xl"]}
         textAlign="center"
         fontWeight="semibold"
       >
