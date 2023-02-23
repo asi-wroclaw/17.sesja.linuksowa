@@ -1,29 +1,40 @@
 import DefaultButton from "@/components/DefaultButton";
-import { Box, VStack, Center, Image, Text, Link, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  VStack,
+  Center,
+  Image,
+  Text,
+  Link,
+  Heading,
+} from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 
-const Cooperation = () => {
+const Sponsorship = () => {
   const { t } = useTranslation("common");
-  const title = t('sponsorshipTitle');
-  const description = t('sponsorshipDescription');
+  const title = t("sponsorshipTitle");
+  const description = t("sponsorshipDescription");
   return (
     <Box
       as="section"
       position="relative"
       width="100%"
-      minHeight={["50vh", "40vh"]}
+      height={["50vh", "40vh"]}
       alignItems="center"
       justifyContent="center"
       margin="0"
       zIndex="2"
-    ><Image
+    >
+      <Image
         src="/bg_oferta.jpeg"
         alt="sponsorship background"
         objectFit="cover"
-        minHeight={["50vh", "40vh"]}
-        objectPosition="center" position="absolute" />
-      <Center minHeight={["50vh", "40vh"]}
-      >
+        width="100%"
+        height={["50vh", "40vh"]}
+        objectPosition="center"
+        position="absolute"
+      />
+      <Center height={["50vh", "40vh"]}>
         <VStack gap={3}>
           <Heading
             zIndex="0"
@@ -31,12 +42,20 @@ const Cooperation = () => {
             fontWeight="bold"
             as="h2"
             textAlign="center"
-            fontSize={["3xl","5xl"]}>
+            fontSize={["3xl", "5xl"]}
+          >
             {title}
           </Heading>
 
-          <Heading isTruncated={false} as="h3" fontSize={["md","2xl"]} textAlign="center"
-            zIndex="0" color="whiteAlpha.900">{description}</Heading>
+          <Heading
+            as="h3"
+            fontSize={["md", "2xl"]}
+            textAlign="center"
+            zIndex="0"
+            color="whiteAlpha.900"
+          >
+            {description}
+          </Heading>
           <Link
             _hover={{ textDecorationLine: "none" }}
             href="/17-sesja-oferta-sponsorska.pdf"
@@ -53,4 +72,4 @@ const Cooperation = () => {
   );
 };
 
-export default Cooperation;
+export default Sponsorship;

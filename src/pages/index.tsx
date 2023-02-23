@@ -7,7 +7,7 @@ import Agenda from "../slices/agenda/Index";
 import PreviousEdition from "@/slices/PreviousEdition";
 import Contact from "@/slices/Contact";
 import Map from "../slices/Map";
-import Cooperation from '../slices/Cooperation';
+import Sponsorship from "../slices/Sponsorship";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +21,7 @@ const Main = () => {
       {config.SHOW_AGENDA && <Agenda />}
       <Map />
 
-      <Cooperation/>
+      <Sponsorship />
       {config.SEND_MESSAGE_URL && (
         <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
       )}
