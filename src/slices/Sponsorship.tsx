@@ -42,7 +42,7 @@ const Sponsorship = () => {
             fontWeight="bold"
             as="h2"
             textAlign="center"
-            fontSize={["3xl", "5xl"]}
+            fontSize={["3xl", "5xl", "7xl"]}
           >
             {title}
           </Heading>

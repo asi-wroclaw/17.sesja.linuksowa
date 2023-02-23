@@ -16,7 +16,7 @@ const Space = ({ text }: { text?: string }) => {
       {text && (
         <Heading
           as="h2"
-          fontSize={{ base: "4xl", md: "7xl" }}
+          fontSize={["3xl", "5xl", "7xl"]}
           zIndex="2"
           color="whiteAlpha.900"
           textAlign="center"
