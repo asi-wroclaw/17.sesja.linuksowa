@@ -67,6 +67,7 @@ const PreviousEdition = () => {
             <iframe
               width="100%"
               height="100%"
+              loading="lazy"
               src={content.youtubeUrl}
               title={content.youtubeIframeTitle}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

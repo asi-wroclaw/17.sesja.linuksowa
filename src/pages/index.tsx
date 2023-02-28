@@ -8,6 +8,8 @@ import PreviousEdition from "@/slices/PreviousEdition";
 import Contact from "@/slices/Contact";
 import Map from "../slices/Map";
 import Sponsorship from "../slices/Sponsorship";
+import Speakers from "../slices/Speakers";
+
 import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +27,7 @@ const Main = () => {
       {config.SEND_MESSAGE_URL && (
         <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
       )}
-
+      {config.SHOW_SPEAKERS && <Speakers speakersData={[]} />}
       <ParticlesBackground />
     </main>
   );
