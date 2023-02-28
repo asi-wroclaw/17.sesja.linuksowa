@@ -27,7 +27,7 @@ const Main = () => {
       {config.SEND_MESSAGE_URL && (
         <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
       )}
-      {config.SHOW_SPEAKERS && <Speakers speakersData={[]} />} 
+      {config.SHOW_SPEAKERS && <Speakers speakersData={[]} />}
       <ParticlesBackground />
     </main>
   );
