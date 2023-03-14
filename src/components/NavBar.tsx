@@ -44,7 +44,7 @@ const NavBarStyle: StyleProps = {
 
 const NavBar = () => {
   const theme = useTheme();
-  const { t } = useTranslation("common");
+  const { t }: { t: (key: string) => string } = useTranslation("common");
 
   const menu = [
     { text: t("menu.about"), sectionId: "about" },
@@ -63,7 +63,7 @@ const NavBar = () => {
     },
     { text: t("menu.sponsors"), sectionId: "sponsors" },
     { text: t("menu.contact"), sectionId: "contact" },
-  ];
+  ].filter(({ text }) => text);
   return (
     <Box {...NavBarStyle}>
       <Hide below="lg">
@@ -128,7 +128,7 @@ const Burger = () => {
     },
     { text: t("menu.sponsors"), sectionId: "sponsors" },
     { text: t("menu.contact"), sectionId: "contact" },
-  ];
+  ].filter(({ text }) => text);
 
   return (
     <Flex

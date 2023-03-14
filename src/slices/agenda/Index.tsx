@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import DaySelect from "./DaySelect";
 import Speech, { SpeechItem } from "./Speech";
 
-const saturdaySpeeches:SpeechItem[] = [
+const saturdaySpeeches: SpeechItem[] = [
   {
     start: "9:00",
     end: "9:50",
