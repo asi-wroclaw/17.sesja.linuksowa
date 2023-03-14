@@ -30,5 +30,13 @@
     "ourGoalTitle": "Nasz cel",
     "sponsorshipTitle":"Współpraca",
     "sponsorshipDescription":"Jesteś zainteresowany współpracą z nami? Zapoznaj się z naszą ofertą sponsorską!",
-    "sponsorshipOffer": "Oferta sponsorska"
+    "sponsorshipOffer": "Oferta sponsorska",
+    "menu":{
+        "about":"O Sesji",
+        "previous":"Nagrania",
+        "agenda":"Agenda",
+        "speakers":"Prelegenci",
+        "sponsors":"Patroni",
+        "contact":"Kontakt"
+    }
 }

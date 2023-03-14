@@ -23,6 +23,7 @@ const PreviousEdition = () => {
 
   return (
     <Box
+      id="previous"
       as="section"
       position="relative"
       zIndex="2"

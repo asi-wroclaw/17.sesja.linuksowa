@@ -16,6 +16,7 @@ const Sponsorship = () => {
   const description = t("sponsorshipDescription");
   return (
     <Box
+      id="sponsors"
       as="section"
       position="relative"
       width="100%"

@@ -44,6 +44,7 @@ ${message}
 
   return (
     <Box
+      id="contact"
       as="section"
       position="relative"
       zIndex="2"
