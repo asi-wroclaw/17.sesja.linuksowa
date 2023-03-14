@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 
-type SpeechItem = {
+export type SpeechItem = {
   start: string;
   end: string;
   title: string;

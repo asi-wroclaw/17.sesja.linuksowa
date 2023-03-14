@@ -1,9 +1,9 @@
 import { Box, VStack, Heading } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import DaySelect from "./DaySelect";
-import Speech from "./Speech";
+import Speech, { SpeechItem } from "./Speech";
 
-const saturdaySpeeches = [
+const saturdaySpeeches:SpeechItem[] = [
   {
     start: "9:00",
     end: "9:50",
@@ -36,30 +36,35 @@ const saturdaySpeeches = [
     start: "13:00",
     end: "14:00",
     title: "Przerwa obiadowa",
+    description: "Własny serwer email - jak i dlaczego [pl]",
   },
   {
     start: "14:00",
     end: "14:50",
     title: "Własny serwer email - jak i dlaczego [pl]5",
     author: "Błażej Święcicki",
+    description: "Własny serwer email - jak i dlaczego [pl]",
   },
   {
     start: "15:00",
     end: "15:50",
     title: "Własny serwer email - jak i dlaczego [pl]6",
     author: "Błażej Święcicki",
+    description: "Własny serwer email - jak i dlaczego [pl]",
   },
   {
     start: "16:00",
     end: "16:50",
     title: "Własny serwer email - jak i dlaczego [pl]7",
     author: "Błażej Święcicki",
+    description: "Własny serwer email - jak i dlaczego [pl]",
   },
   {
     start: "17:00",
     end: "17:50",
     title: "Własny serwer email - jak i dlaczego [pl]8",
     author: "Błażej Święcicki",
+    description: "Własny serwer email - jak i dlaczego [pl]",
   },
 ];
 
