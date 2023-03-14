@@ -27,9 +27,9 @@ const Lang = ({ textColor = "whiteAlpha.900" }: { textColor?: string }) => (
     height="30px"
     width="100px"
   >
-    <LangItem text="PL" locale="pl" />
+    <LangItem textColor={textColor} text="PL" locale="pl" />
     {" | "}
-    <LangItem text="EN" locale="en" />
+    <LangItem textColor={textColor} text="EN" locale="en" />
   </Box>
 );
 
