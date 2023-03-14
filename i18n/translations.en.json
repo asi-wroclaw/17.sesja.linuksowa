@@ -31,6 +31,14 @@
     "ourGoalTitle": "Our Goal",
     "sponsorshipTitle":"Sponsorship",
     "sponsorshipDescription":"Would you like to support us? Here's what we can offer our sponsors!",
-    "sponsorshipOffer": "Sponsorship offer"
+    "sponsorshipOffer": "Sponsorship offer",
+    "menu":{
+        "about":"About",
+        "previous":"Talks",
+        "agenda":"Agenda",
+        "speakers":"Speakers",
+        "sponsors":"Patrons",
+        "contact":"Contact us"
+    }
 
 }
