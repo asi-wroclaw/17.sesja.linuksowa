@@ -4,6 +4,7 @@ import InformatykZakladowy from "./Informatyk_Zakladowy.jpg";
 import CezaryDynak from "./Cezary_Dynak.png";
 import Mewp from "./mewp.jpg";
 import Siewca from "./siewca.jpg";
+import Vovcia from './vovcia.png';
 
 export const SPEAKERS: SpeakerProps[] = [
   {
@@ -26,7 +27,7 @@ export const SPEAKERS: SpeakerProps[] = [
       linkedin: "",
       github: "",
     },
-    name: "",
+    name: "Tomasz Zieliński",
     description:
       "Lead Machine Learning Engineer in GlobalLogic with 7 years of experience in the industry.",
   },
@@ -99,7 +100,7 @@ export const SPEAKERS: SpeakerProps[] = [
       "Absolwent specjalności Embedded Robotics oraz były admin lab07/C-3 na PWr. Obecnie pracuje jako Node.js developer w startupie TapNav, wcześniej jako Head od Node.js w STX Next. Współorganizator meet.js Wrocław oraz meet.js Summit. Poza JS/TS, back-endem oraz IoT interesuje się także Linuksem pod kątem systemów wbudowanych i DevOps.",
   },
   {
-    image: "",
+    image: Vovcia,
     urls: {
       website: "",
       twitter: "",

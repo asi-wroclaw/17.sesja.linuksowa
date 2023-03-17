@@ -1,4 +1,11 @@
-import { Grid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Collapse,
+  Grid,
+  GridItem,
+  Text,
+  useDisclosure,
+  Box,
+} from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 
 type SpeechItem = {
@@ -6,13 +13,17 @@ type SpeechItem = {
   end: string;
   title: string;
   author?: string;
+  description?:string;
 };
 
 const Speech = ({ speech }: { speech: SpeechItem }) => {
-  const { start, end, title, author } = speech;
+  const { isOpen, onToggle } = useDisclosure();
+  const { start, end, title, author, description } = speech;
+  const style = description ? {cursor:"pointer"} : {}
   const theme = useTheme();
   return (
     <Grid
+      onClick={() => description && onToggle()}
       templateAreas={`"time title"
                       "space title"
                       "space author"`}
@@ -32,17 +43,30 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           {start}-{end}
         </Text>
       </GridItem>
-      <GridItem area="title">
+      <GridItem area="title" {...style}>
         <Text fontSize={["sm", "md", "xl", "2xl"]} color="whiteAlpha.900">
           {title}
         </Text>
       </GridItem>
       <GridItem rowSpan={2} colSpan={1}></GridItem>
-      <GridItem area="author">
+      <GridItem area="author" {...style}>
         <Text fontSize={["sm", "md", "xl", "2xl"]} color="whiteAlpha.900">
           {author}
         </Text>
       </GridItem>
+      <Collapse in={isOpen} animateOpacity style={{ gridColumn: "2" }}>
+          <Box
+            gridColumn="2"
+            p="4px"
+            color="white"
+            mt="4"
+            bg="black"
+            rounded="md"
+            shadow="md"
+          >
+            {description}
+          </Box>
+        </Collapse>
     </Grid>
   );
 };
