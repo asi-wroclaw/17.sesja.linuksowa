@@ -9,6 +9,7 @@ import Contact from "@/slices/Contact";
 import Map from "../slices/Map";
 import Sponsorship from "../slices/Sponsorship";
 import Speakers from "../slices/Speakers";
+import { SPEAKERS } from "../assets/speakers/speakersData";
 
 import ParticlesBackground from "@/components/ParticlesBackground";
 
@@ -27,7 +28,7 @@ const Main = () => {
       {config.SEND_MESSAGE_URL && (
         <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
       )}
-      {config.SHOW_SPEAKERS && <Speakers speakersData={[]} />}
+      <Speakers speakersData={SPEAKERS} />
       <ParticlesBackground />
     </main>
   );

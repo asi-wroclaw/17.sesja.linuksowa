@@ -13,7 +13,7 @@ type SocialUrls = {
   github: string;
 };
 
-type SpeakerProps = {
+export type SpeakerProps = {
   image: string | StaticImageData;
   urls: SocialUrls;
   name: string;
@@ -39,7 +39,8 @@ const Socials = ({ name, urls }: { name: string; urls: SocialUrls }) => (
 
 const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
   const theme = useTheme();
-
+  const showSocials =
+    urls.github || urls.linkedin || urls.twitter || urls.website;
   return (
     <Flex zIndex="3">
       <Box>
@@ -55,7 +56,7 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
           <Heading fontSize="3xl" as="h5" color="whiteAlpha.900">
             {name}
           </Heading>
-          <Socials name={name} urls={urls} />
+          {showSocials && <Socials name={name} urls={urls} />}
         </VStack>
       </Box>
     </Flex>
@@ -74,9 +75,11 @@ const Speakers = ({ speakersData }: { speakersData: SpeakerProps[] }) => {
         justifyContent="space-around"
         gap="30px 30px"
       >
-        {speakersData.map((speakerData, index) => (
-          <Speaker key={index} {...speakerData} />
-        ))}
+        {speakersData
+          // .filter((speaker)=>speaker.image && speaker.name)
+          .map((speakerData, index) => (
+            <Speaker key={index} {...speakerData} />
+          ))}
       </Flex>
     </Box>
   );
