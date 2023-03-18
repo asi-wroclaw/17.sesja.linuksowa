@@ -31,11 +31,11 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
                       "space title b"
                       "space author author"`}
       gridTemplateColumns={[
-        "85px 1fr 120px",
-        "100px 1fr 120px",
-        "120px 1fr 120px",
-        "170px 1fr 120px",
-        "200px 1fr 120px",
+        "85px 1fr auto",
+        "100px 1fr auto",
+        "120px 1fr auto",
+        "170px 1fr auto",
+        "200px 1fr auto",
       ]}
       paddingBottom={3}
       paddingTop={3}
@@ -58,10 +58,16 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
         </Text>
       </GridItem>
       {description && (
-        <GridItem gridArea="b">
+        <GridItem
+          gridArea="b"
+          minWidth={["60px", "60px", "74px", "90px"]}
+          display="flex"
+        >
           <DefaultButton
+            marginLeft="auto"
+            size={["xs", "xs", "sm", "md"]}
             _hover={{ color: "black" }}
-            text={t(isOpen ? "less" : "more")}
+            text={isOpen ? "less" : "more"}
           />
         </GridItem>
       )}
@@ -76,7 +82,11 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           shadow="md"
         >
           {description?.map((descriptionText, index) => (
-            <Text key={`${descriptionText}-${index}`} minH="15px">
+            <Text
+              fontSize={["sm", "md", "xl", "2xl"]}
+              key={`${descriptionText}-${index}`}
+              minH="15px"
+            >
               {descriptionText}
             </Text>
           ))}

@@ -19,7 +19,7 @@ const DayOption = ({ selected = false, text, select }: DayOptionProps) => {
       onClick={select}
       paddingTop="5"
       paddingBottom="1"
-      height={["110px", "70px", "70px", "70px"]}
+      height={["90px", "70px", "70px", "70px"]}
       width="50%"
       {...borderBottom}
     >
