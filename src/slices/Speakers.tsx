@@ -57,7 +57,7 @@ const Socials = ({ name, urls }: { name: string; urls: SocialUrls }) => (
 
 const getImageSize = (
   sizes: number[],
-  maxSizes: number[] = [500, 500]
+  maxSizes: number[] = [500, 450]
 ): number[] => {
   if (sizes.length !== 2) return sizes;
   const [width, height] = sizes;
@@ -136,15 +136,9 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
   const showSocials =
     urls.github || urls.linkedin || urls.twitter || urls.website;
   return (
-    <Flex zIndex="3" 
-    cursor="pointer"
-      onClick={onOpen}>
+    <Flex zIndex="3" cursor="pointer" onClick={onOpen}>
       <Box>
-        <Box
-          w={300}
-          h={300}
-          position="relative"
-        >
+        <Box w={300} h={300} position="relative">
           <Image
             alt={`${name} image`}
             fill
