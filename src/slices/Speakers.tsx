@@ -57,7 +57,7 @@ const Socials = ({ name, urls }: { name: string; urls: SocialUrls }) => (
 
 const getImageSize = (
   sizes: number[],
-  maxSizes: number[] = [500, 450]
+  maxSizes: number[] = [500, 400]
 ): number[] => {
   if (sizes.length !== 2) return sizes;
   const [width, height] = sizes;
