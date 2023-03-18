@@ -7,19 +7,22 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
+import DefaultButton from "@/components/DefaultButton";
+import { useTranslation } from "next-export-i18n";
 
 type SpeechItem = {
   start: string;
   end: string;
   title: string;
   author?: string;
-  description?:string;
+  description?: string[];
 };
 
 const Speech = ({ speech }: { speech: SpeechItem }) => {
   const { isOpen, onToggle } = useDisclosure();
+  const { t } = useTranslation("common");
   const { start, end, title, author, description } = speech;
-  const style = description ? {cursor:"pointer"} : {}
+  const style = description ? { cursor: "pointer" } : {};
   const theme = useTheme();
   return (
     <Grid
@@ -28,11 +31,11 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
                       "space title"
                       "space author"`}
       gridTemplateColumns={[
-        "85px 1fr",
-        "100px 1fr",
-        "120px 1fr",
-        "170px 1fr",
-        "200px 1fr",
+        "85px 1fr 100px",
+        "100px 1fr 100px",
+        "120px 1fr 100px",
+        "170px 1fr 100px",
+        "200px 1fr 100px",
       ]}
       paddingBottom={3}
       paddingTop={3}
@@ -54,19 +57,20 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           {author}
         </Text>
       </GridItem>
+      {description && <GridItem rowSpan={"1"} area="button"><DefaultButton text={t(isOpen ? "less" : "more")} /></GridItem>}
       <Collapse in={isOpen} animateOpacity style={{ gridColumn: "2" }}>
-          <Box
-            gridColumn="2"
-            p="4px"
-            color="white"
-            mt="4"
-            bg="black"
-            rounded="md"
-            shadow="md"
-          >
-            {description}
-          </Box>
-        </Collapse>
+        <Box
+          gridColumn="2"
+          p="4px"
+          color="white"
+          mt="4"
+          bg="black"
+          rounded="md"
+          shadow="md"
+        >
+          {description?.map((descriptionText) => <Text minH="15px">{descriptionText}</Text>)}
+        </Box>
+      </Collapse>
     </Grid>
   );
 };

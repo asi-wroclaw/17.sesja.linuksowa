@@ -4,7 +4,7 @@ import InformatykZakladowy from "./Informatyk_Zakladowy.jpg";
 import CezaryDynak from "./Cezary_Dynak.png";
 import Mewp from "./mewp.jpg";
 import Siewca from "./siewca.jpg";
-import Vovcia from './vovcia.png';
+import Vovcia from "./vovcia.png";
 
 export const SPEAKERS: SpeakerProps[] = [
   {
