@@ -66,7 +66,7 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
 const Speakers = ({ speakersData }: { speakersData: SpeakerProps[] }) => {
   if (!speakersData.length) return null;
   return (
-    <Box backgroundColor="black" minH="40vh">
+    <Box id="speakers" backgroundColor="black" minH="40vh">
       <Flex
         margin="auto"
         maxW="1000px"

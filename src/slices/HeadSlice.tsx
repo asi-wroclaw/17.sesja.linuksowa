@@ -1,5 +1,4 @@
-import { Box, StyleProps, Button, Flex } from "@chakra-ui/react";
-import ParticlesBackground from "../components/ParticlesBackground";
+import { Box, StyleProps, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import logo from "../assets/logo-duze-pl.png";
 import pinguin from "../assets/bg_pingwin.png";
@@ -9,33 +8,11 @@ import { Show } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import config from "../config";
 import { useTranslation } from "next-export-i18n";
-import Lang from "@/components/Lang";
 
 const HeadContainerStyle: StyleProps = {
   height: "100vh",
   width: "100%",
   bg: "#000000",
-};
-
-const NavBarStyle: StyleProps = {
-  height: "60px",
-  bg: "#000000",
-  opacity: "90%",
-  position: "absolute",
-  width: "100%",
-  zIndex: "3",
-};
-
-const NavBar = () => {
-  return (
-    <Box {...NavBarStyle}>
-      {" "}
-      <Flex mt="3" ml="5" height="40px" justifyContent="space-between">
-        <Image alt="sesja linuksowa" height="40" src={logo} />
-        <Lang />
-      </Flex>
-    </Box>
-  );
 };
 
 const Title = () => {
@@ -110,7 +87,6 @@ const HeadDescription = () => {
 const HeadSlice = () => {
   return (
     <Box as="section" {...HeadContainerStyle} m={0}>
-      <NavBar />
       <Stack
         height="inherit"
         justifyContent="space-evenly"

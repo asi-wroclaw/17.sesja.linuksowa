@@ -10,7 +10,7 @@ import { useTheme } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import { useTranslation } from "next-export-i18n";
 
-type SpeechItem = {
+export type SpeechItem = {
   start: string;
   end: string;
   title: string;

@@ -32,5 +32,13 @@
     "sponsorshipDescription":"Jesteś zainteresowany współpracą z nami? Zapoznaj się z naszą ofertą sponsorską!",
     "sponsorshipOffer": "Oferta sponsorska",
     "more":"Więcej",
-    "less": "Mniej"
+    "less": "Mniej",
+    "menu":{
+        "about":"O Sesji",
+        "previous":"Nagrania",
+        "agenda":"Agenda",
+        "speakers":"Prelegenci",
+        "sponsors":"Patroni",
+        "contact":"Kontakt"
+    }
 }

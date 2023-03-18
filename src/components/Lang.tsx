@@ -1,19 +1,35 @@
 import { Box, Text } from "@chakra-ui/react";
 import { LanguageSwitcher } from "next-export-i18n";
 
-const LangItem = ({ text, locale }: { text: string; locale: string }) => (
+const LangItem = ({
+  text,
+  locale,
+  textColor = "whiteAlpha.900",
+}: {
+  textColor?: string;
+  text: string;
+  locale: string;
+}) => (
   <LanguageSwitcher lang={locale}>
-    <Text cursor="pointer" as="span" color="whiteAlpha.900">
+    <Text cursor="pointer" as="span" color={textColor}>
       {text}
     </Text>
   </LanguageSwitcher>
 );
 
-const Lang = () => (
-  <Box color="whiteAlpha.900" zIndex="4" width="100px">
-    <LangItem text="PL" locale="pl" />
+const Lang = ({ textColor = "whiteAlpha.900" }: { textColor?: string }) => (
+  <Box
+    color={textColor}
+    zIndex="4"
+    fontSize="lg"
+    marginTop="auto"
+    marginBottom="auto"
+    height="30px"
+    width="100px"
+  >
+    <LangItem textColor={textColor} text="PL" locale="pl" />
     {" | "}
-    <LangItem text="EN" locale="en" />
+    <LangItem textColor={textColor} text="EN" locale="en" />
   </Box>
 );
 

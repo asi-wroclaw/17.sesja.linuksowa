@@ -29,6 +29,7 @@ const AboutUs = () => {
   ];
   return (
     <Box
+      id="about"
       as="section"
       display="flex"
       justifyContent="center"

@@ -26,16 +26,25 @@ const Agenda = () => {
   ];
 
   return (
-    <Box as="section" zIndex="2" width="100%" bg="#000000" minHeight="100vh">
+    <Box
+      as="section"
+      id="agenda"
+      zIndex="2"
+      width="100%"
+      bg="#000000"
+      minHeight="100vh"
+      paddingTop="50"
+      paddingBottom="100"
+    >
       <VStack gap="10" width="inherit">
-        <Heading
+        {/* <Heading
           marginLeft="8"
           alignSelf="flex-start"
           as="h3"
           color="whiteAlpha.900"
         >
           Agenda
-        </Heading>
+        </Heading> */}
         <DaySelect days={days} />
         <Box width={["95%", "80%", "70%", "60%"]} zIndex="30" margin="auto">
           {(isSaturday ? SATURDAY_AGENDA : SUNDAY_AGENDA).map((speech) => (
