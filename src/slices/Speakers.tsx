@@ -88,7 +88,6 @@ const SpeakerModal = ({
   const { t } = useTranslation("common");
   const { height, width } = image as { height: number; width: number };
   const [imageWidth, imageHeight] = getImageSize([width, height]);
-
   return (
     <DarkMode>
       <Modal
@@ -112,7 +111,12 @@ const SpeakerModal = ({
                   src={image}
                 />
               </Box>
-              <Text minWidth="300px">{description}</Text>
+              {(description || [])?.map((descriptionText, index) => (
+                <Text key={`${descriptionText}-${index}`} minH="15px">
+                  {descriptionText}
+                </Text>
+              ))}
+              {/* <Text minWidth="300px">{description}</Text> */}
             </VStack>
           </ModalBody>
           <ModalFooter>
@@ -178,9 +182,31 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
 };
 
 const Speakers = ({ speakersData }: { speakersData: SpeakerProps[] }) => {
+  const theme = useTheme();
+  const { t } = useTranslation("common");
+
   if (!speakersData.length) return null;
   return (
     <Box id="speakers" backgroundColor="black" minH="40vh">
+      <Box
+        display="flex"
+        justifyContent="center"
+        width="100%"
+        minHeight="30vh"
+        opacity="100%"
+        position="relative"
+        zIndex="2"
+      >
+        <Heading
+          margin="auto"
+          alignSelf="flex-start"
+          as="h2"
+          color="whiteAlpha.900"
+          fontSize={["3xl", "5xl", "7xl"]}
+        >
+          {t("menu.speakers")}
+        </Heading>
+      </Box>
       <Flex
         margin="auto"
         maxW="1000px"

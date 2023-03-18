@@ -20,21 +20,12 @@ import { useTheme } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import Lang from "@/components/Lang";
 import config from "../config";
+import scrollToSection from "@/utils/scrollToSection";
 
-const HEADER_HEIGHT = 60;
-
-const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(`${sectionId}`);
-  if (window && element) {
-    window.scrollTo({
-      behavior: "smooth",
-      top: element.getBoundingClientRect().top + window.scrollY - HEADER_HEIGHT,
-    });
-  }
-};
+export const HEADER_HEIGHT = 60;
 
 const NavBarStyle: StyleProps = {
-  height: "60px",
+  height: `${HEADER_HEIGHT}px`,
   bg: "#000000",
   position: "fixed",
   top: "0",

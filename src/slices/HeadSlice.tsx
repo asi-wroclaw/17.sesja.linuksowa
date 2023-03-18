@@ -1,6 +1,5 @@
-import { Box, StyleProps, Flex, Text } from "@chakra-ui/react";
+import { Box, StyleProps } from "@chakra-ui/react";
 import Image from "next/image";
-import logo from "../assets/logo-duze-pl.png";
 import pinguin from "../assets/bg_pingwin.png";
 import { Stack, VStack, Heading } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
@@ -8,6 +7,7 @@ import { Show } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import config from "../config";
 import { useTranslation } from "next-export-i18n";
+import scrollToSection from "@/utils/scrollToSection";
 
 const HeadContainerStyle: StyleProps = {
   height: "100vh",
@@ -79,7 +79,12 @@ const HeadDescription = () => {
     >
       <Title />
       <SpotDescription />
-      {config.SHOW_AGENDA && <DefaultButton text={t("seeAgenda")} />}
+      {config.SHOW_AGENDA && (
+        <DefaultButton
+          onClick={() => scrollToSection("agenda")}
+          text={t("seeAgenda")}
+        />
+      )}
     </VStack>
   );
 };
