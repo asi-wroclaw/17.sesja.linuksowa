@@ -22,6 +22,7 @@ const Main = () => {
       <NavBar />
       <HeadSlice />
       <AboutUs />
+      <Speakers speakersData={SPEAKERS} />
       {config.SHOW_AGENDA && <Agenda />}
       <PreviousEdition />
       <Map />
@@ -29,7 +30,6 @@ const Main = () => {
       {config.SEND_MESSAGE_URL && (
         <Contact sendMessageUrl={config.SEND_MESSAGE_URL} />
       )}
-      <Speakers speakersData={SPEAKERS} />
       <ParticlesBackground />
     </main>
   );

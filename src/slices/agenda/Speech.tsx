@@ -59,7 +59,10 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
       </GridItem>
       {description && (
         <GridItem gridArea="b">
-          <DefaultButton text={t(isOpen ? "less" : "more")} />
+          <DefaultButton
+            _hover={{ color: "black" }}
+            text={t(isOpen ? "less" : "more")}
+          />
         </GridItem>
       )}
       <Collapse in={isOpen} animateOpacity style={{ gridColumn: "2/span 3" }}>
@@ -72,8 +75,8 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           rounded="md"
           shadow="md"
         >
-          {description?.map((descriptionText) => (
-            <Text key={descriptionText} minH="15px">
+          {description?.map((descriptionText, index) => (
+            <Text key={`${descriptionText}-${index}`} minH="15px">
               {descriptionText}
             </Text>
           ))}

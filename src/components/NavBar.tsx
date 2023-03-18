@@ -39,7 +39,7 @@ const NavBarStyle: StyleProps = {
   position: "fixed",
   top: "0",
   width: "100%",
-  zIndex: "3000",
+  zIndex: "100",
 };
 
 const NavBar = () => {

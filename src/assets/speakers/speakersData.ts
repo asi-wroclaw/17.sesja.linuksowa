@@ -5,7 +5,7 @@ import CezaryDynak from "./Cezary_Dynak.png";
 import Mewp from "./mewp.jpg";
 import Siewca from "./siewca.jpg";
 import Vovcia from "./vovcia.png";
-
+import KamilGalek from "./Kamil_Galek.jpg";
 export const SPEAKERS: SpeakerProps[] = [
   {
     image: FilipDrapejkowski,
@@ -29,7 +29,7 @@ export const SPEAKERS: SpeakerProps[] = [
     },
     name: "Tomasz Zieliński",
     description:
-      "Lead Machine Learning Engineer in GlobalLogic with 7 years of experience in the industry.",
+      "Tomasz Zieliński, zawodowy programista od 2003 roku, pasjonat bezpieczeństwa informatycznego, autor bloga Informatyk Zakładowy. Rozwijał systemy finansowe dla NBP, tworzył i weryfikował zabezpieczenia bankowych aplikacji mobilnych, brał udział w pracach nad grą Angry Birds i wyszukiwarką internetową Microsoft Bing. Obecnie programista w firmie DeepL.",
   },
   {
     image: "",
@@ -43,7 +43,7 @@ export const SPEAKERS: SpeakerProps[] = [
     description: "",
   },
   {
-    image: "",
+    image: KamilGalek,
     urls: {
       website: "",
       twitter: "",
@@ -107,8 +107,8 @@ export const SPEAKERS: SpeakerProps[] = [
       linkedin: "",
       github: "",
     },
-    name: `Vladimir "vovcia" Mitiouchev`,
-    description: "Systems architect, Python developer, współzałożyciel CLUG.",
+    name: `Vladimir Mitiouchev`,
+    description: `Vladimir "vovcia" Mitiouchev - Systems architect, Python developer, współzałożyciel fundacji CLUG.`,
   },
   {
     image: Siewca,
