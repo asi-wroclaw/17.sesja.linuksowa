@@ -25,7 +25,7 @@ const DayOption = ({ selected = false, text, select }: DayOptionProps) => {
     >
       <Text
         _groupHover={{ color: !selected && theme.colors.primary }}
-        fontSize={["xl", "2xl","2xl", "2xl"]}
+        fontSize={["xl", "2xl", "2xl", "2xl"]}
         color="whiteAlpha.900"
         textAlign="center"
       >

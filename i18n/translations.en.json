@@ -32,8 +32,8 @@
     "sponsorshipTitle":"Sponsorship",
     "sponsorshipDescription":"Would you like to support us? Here's what we can offer our sponsors!",
     "sponsorshipOffer": "Sponsorship offer",
-    "more":"Show more",
-    "less":"Show less",
+    "more":"more",
+    "less":"less",
     "close":"close",
     "menu":{
         "about":"About",
