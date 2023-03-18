@@ -27,15 +27,15 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
   return (
     <Grid
       onClick={() => description && onToggle()}
-      templateAreas={`"time title"
-                      "space title"
-                      "space author"`}
+      templateAreas={`"time title b"
+                      "space title b"
+                      "space author author"`}
       gridTemplateColumns={[
-        "85px 1fr 100px",
-        "100px 1fr 100px",
-        "120px 1fr 100px",
-        "170px 1fr 100px",
-        "200px 1fr 100px",
+        "85px 1fr 120px",
+        "100px 1fr 120px",
+        "120px 1fr 120px",
+        "170px 1fr 120px",
+        "200px 1fr 120px",
       ]}
       paddingBottom={3}
       paddingTop={3}
@@ -57,8 +57,12 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           {author}
         </Text>
       </GridItem>
-      {description && <GridItem rowSpan={"1"} area="button"><DefaultButton text={t(isOpen ? "less" : "more")} /></GridItem>}
-      <Collapse in={isOpen} animateOpacity style={{ gridColumn: "2" }}>
+      {description && (
+        <GridItem gridArea="b">
+          <DefaultButton text={t(isOpen ? "less" : "more")} />
+        </GridItem>
+      )}
+      <Collapse in={isOpen} animateOpacity style={{ gridColumn: "2/span 3" }}>
         <Box
           gridColumn="2"
           p="4px"
@@ -68,7 +72,11 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           rounded="md"
           shadow="md"
         >
-          {description?.map((descriptionText) => <Text minH="15px">{descriptionText}</Text>)}
+          {description?.map((descriptionText) => (
+            <Text key={descriptionText} minH="15px">
+              {descriptionText}
+            </Text>
+          ))}
         </Box>
       </Collapse>
     </Grid>

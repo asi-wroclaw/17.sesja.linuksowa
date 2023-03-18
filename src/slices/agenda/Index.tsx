@@ -2,7 +2,7 @@ import { Box, VStack, Heading } from "@chakra-ui/react";
 import { useState } from "react";
 import DaySelect from "./DaySelect";
 import Speech from "./Speech";
-import { SATURDAY_AGENDA, SUNDAY_AGENDA} from '../../assets/AgendaData';
+import { SATURDAY_AGENDA, SUNDAY_AGENDA } from "../../assets/AgendaData";
 
 const Agenda = () => {
   const [isSaturday, setSaturday] = useState<boolean>(true);
