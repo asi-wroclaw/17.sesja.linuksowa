@@ -52,8 +52,13 @@ export const SATURDAY_AGENDA = [
   {
     start: "15:00",
     end: "15:50",
-    title: "Szczegóły wkrótce",
-    author: "",
+    title: "NixOS—jak? po co? dlaczego?",
+    author: "Błażej Święcicki",
+    description: [
+      "NixOS jest dystrybucją Linuksa z bardzo dziwną propozycją: rób wszystko inaczej i będzie fajnie. Pierwsze pytanie, które się rodzi—dlaczego ktoś miałby to sobie robić? Drugie jednak... dlaczego potem się nie chce używać niczego innego?",
+      "",
+      "Spróbujmy zrozumieć czym jest Nix i NixOS, a co ważniejsze: co sprawia, że jest najlepszym sposobem konfiguracji systemów operacyjnych jaki w życiu widziałem.",
+    ],
   },
   {
     start: "16:00",
@@ -111,12 +116,7 @@ export const SUNDAY_AGENDA = [
   {
     start: "15:00",
     end: "15:50",
-    title: "NixOS—jak? po co? dlaczego?",
-    author: "Błażej Święcicki",
-    description: [
-      "NixOS jest dystrybucją Linuksa z bardzo dziwną propozycją: rób wszystko inaczej i będzie fajnie. Pierwsze pytanie, które się rodzi—dlaczego ktoś miałby to sobie robić? Drugie jednak... dlaczego potem się nie chce używać niczego innego?",
-      "",
-      "Spróbujmy zrozumieć czym jest Nix i NixOS, a co ważniejsze: co sprawia, że jest najlepszym sposobem konfiguracji systemów operacyjnych jaki w życiu widziałem.",
-    ],
+    title: "Szczegóły wkrótce",
+    author: "",
   },
 ];
