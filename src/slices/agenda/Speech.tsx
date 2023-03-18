@@ -58,14 +58,10 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
         </Text>
       </GridItem>
       {description && (
-        <GridItem
-          gridArea="b"
-          minWidth={["60px", "60px", "74px", "90px"]}
-          display="flex"
-        >
+        <GridItem gridArea="b" minWidth={["60px","60px","74px","90px"]} display="flex">
           <DefaultButton
-            marginLeft="auto"
-            size={["xs", "xs", "sm", "md"]}
+          marginLeft="auto"
+            size={["xs","xs", "sm", "md"]}
             _hover={{ color: "black" }}
             text={isOpen ? "less" : "more"}
           />
