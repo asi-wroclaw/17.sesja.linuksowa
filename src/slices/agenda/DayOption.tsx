@@ -19,13 +19,13 @@ const DayOption = ({ selected = false, text, select }: DayOptionProps) => {
       onClick={select}
       paddingTop="5"
       paddingBottom="1"
-      height={["90px", "60px"]}
-      width="45%"
+      height={["110px", "70px", "70px", "70px"]}
+      width="50%"
       {...borderBottom}
     >
       <Text
         _groupHover={{ color: !selected && theme.colors.primary }}
-        fontSize="xl"
+        fontSize={["xl", "2xl","2xl", "2xl"]}
         color="whiteAlpha.900"
         textAlign="center"
       >
