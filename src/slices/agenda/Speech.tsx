@@ -65,6 +65,7 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
         >
           <DefaultButton
             marginLeft="auto"
+            textTransform="uppercase"
             size={["xs", "xs", "sm", "md"]}
             _hover={{ color: "black" }}
             text={isOpen ? "less" : "more"}
@@ -83,7 +84,7 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
         >
           {description?.map((descriptionText, index) => (
             <Text
-              fontSize={["sm", "md", "xl", "2xl"]}
+              fontSize={["sm", "sm", "lg", "xl"]}
               key={`${descriptionText}-${index}`}
               minH="15px"
             >
