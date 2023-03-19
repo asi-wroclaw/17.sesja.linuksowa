@@ -83,6 +83,7 @@ const HeadDescription = () => {
         <DefaultButton
           onClick={() => scrollToSection("agenda")}
           text={t("seeAgenda")}
+          _hover={{ color: "black" }}
         />
       )}
     </VStack>

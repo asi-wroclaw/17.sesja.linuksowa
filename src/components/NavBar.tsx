@@ -51,7 +51,7 @@ const NavBar = () => {
         sectionId: "agenda",
       }),
     },
-    
+
     { text: t("menu.previous"), sectionId: "previous" },
     { text: t("menu.sponsors"), sectionId: "sponsors" },
     { text: t("menu.contact"), sectionId: "contact" },
@@ -83,8 +83,7 @@ const NavBar = () => {
                 key={text}
                 textTransform="capitalize"
                 color="whiteAlpha.900"
-                fontSize={["sm","sm","lg","xl"]}
-
+                fontSize={["sm", "sm", "lg", "xl"]}
                 cursor="pointer"
                 height="30px"
                 onClick={() => sectionId && scrollToSection(sectionId)}
