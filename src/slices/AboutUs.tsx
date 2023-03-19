@@ -1,7 +1,7 @@
 import { Box, Stack } from "@chakra-ui/react";
 import cel from "../assets/aboutUs/cel.png";
 import coTo from "../assets/aboutUs/coTo.png";
-import jakWyglada from "../assets/aboutUs/jakWyglada.png";
+import lupa from "../assets/aboutUs/lupa.svg";
 import { useTheme } from "@chakra-ui/react";
 import ImageItem from "@/components/ImageItem";
 import { useTranslation } from "next-export-i18n";
@@ -17,7 +17,7 @@ const AboutUs = () => {
       title: t("aboutUsWhatIsTitle"),
     },
     {
-      image: jakWyglada,
+      image: lupa,
       text: t("howItLooksLiketext"),
       title: t("howItLooksLikeTitle"),
     },
