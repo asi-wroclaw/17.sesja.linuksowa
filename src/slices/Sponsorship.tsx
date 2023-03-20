@@ -9,18 +9,40 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
+import asi from "../assets/loga/logo-asi.png";
+import manus from "../assets/loga/logo-manus.png";
+import pwr from "../assets/loga/logo-pwr.png";
+import NextImage, { StaticImageData } from "next/image";
 
 const Sponsorship = () => {
   const { t } = useTranslation("common");
   const title = t("sponsorshipTitle");
   const description = t("sponsorshipDescription");
+
+  const sponsorsAndOrganizations = [
+    {
+      title: "Sponsorzy",
+      logos: [],
+    },
+    {
+      title: "Patroni",
+      logos: [],
+    },
+    {
+      title: "Organizatorzy",
+      logos: [
+        { image: asi, href: "https://www.asi.wroclaw.pl/" },
+        { image: pwr, href: "https://pwr.edu.pl/" },
+      ],
+    },
+  ];
   return (
     <Box
       id="sponsors"
       as="section"
       position="relative"
       width="100%"
-      height={["50vh", "40vh"]}
+      minHeight={["50vh", "40vh"]}
       alignItems="center"
       justifyContent="center"
       margin="0"
@@ -69,6 +91,24 @@ const Sponsorship = () => {
           </Link>
         </VStack>
       </Center>
+      {sponsorsAndOrganizations.map(({ logos, title }) => (
+        <Box key={title} width="100%" minHeight="30vh">
+          <VStack gap="10">
+            <Heading
+              zIndex="0"
+              fontWeight="bold"
+              as="h2"
+              textAlign="center"
+              fontSize={["xl", "3xl", "5xl"]}
+            >
+              {title}
+            </Heading>
+            {logos.map(({ image, href }) => (
+              <NextImage key={href} alt={`${title} image`} src={image} />
+            ))}
+          </VStack>
+        </Box>
+      ))}
     </Box>
   );
 };
