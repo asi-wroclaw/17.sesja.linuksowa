@@ -5,6 +5,9 @@ export const SATURDAY_AGENDA = [
     title:
       "Computer Vision & Deep Learning in Sugar Factories - Lessons Learned",
     author: "Filip Drapejkowski",
+    description: [
+      "Deep Learning became common in factories and it's not a fad. This is a story of integrating Neural Networks capable of Instance Aware Segmentation, Detection, Regression, and Classification in sugar factories around Europe. It focuses mostly on difficulties and how we overcome them. The work was tedious and frustrating, but it resulted in a well-established process that boost the quality of the sugar process while cutting costs."
+    ]
   },
   {
     start: "11:00",
