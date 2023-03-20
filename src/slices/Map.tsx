@@ -21,6 +21,7 @@ const Space = ({ text }: { text?: string }) => {
           color="whiteAlpha.900"
           textAlign="center"
           mt="auto"
+          mb="auto"
           fontWeight="semibold"
         >
           {text}

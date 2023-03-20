@@ -10,11 +10,25 @@ type ImageItemProps = {
 const ImageItem = ({ imageSrc, title, text }: ImageItemProps) => {
   return (
     <VStack flex="1">
-      <Image alt={`${title} image`} src={imageSrc} />
-      <Heading fontWeight="bold" as="h4" textAlign="center">
+      <Image
+        width={270}
+        height={270}
+        color="white"
+        alt={`${title} image`}
+        src={imageSrc}
+      />
+      <Heading
+        color="whiteAlpha.900"
+        fontWeight="bold"
+        as="h4"
+        textAlign="center"
+        noOfLines={[1, 2]}
+      >
         {title}
       </Heading>
-      <Text textAlign="center">{text}</Text>
+      <Text textAlign="center" color="whiteAlpha.900">
+        {text}
+      </Text>
     </VStack>
   );
 };

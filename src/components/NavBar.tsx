@@ -20,26 +20,17 @@ import { useTheme } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import Lang from "@/components/Lang";
 import config from "../config";
+import scrollToSection from "@/utils/scrollToSection";
 
-const HEADER_HEIGHT = 60;
-
-const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(`${sectionId}`);
-  if (window && element) {
-    window.scrollTo({
-      behavior: "smooth",
-      top: element.getBoundingClientRect().top + window.scrollY - HEADER_HEIGHT,
-    });
-  }
-};
+export const HEADER_HEIGHT = 60;
 
 const NavBarStyle: StyleProps = {
-  height: "60px",
+  height: `${HEADER_HEIGHT}px`,
   bg: "#000000",
   position: "fixed",
   top: "0",
   width: "100%",
-  zIndex: "3000",
+  zIndex: "100",
 };
 
 const NavBar = () => {
@@ -48,19 +39,20 @@ const NavBar = () => {
 
   const menu = [
     { text: t("menu.about"), sectionId: "about" },
-    { text: t("menu.previous"), sectionId: "previous" },
-    {
-      ...(config.SHOW_AGENDA && {
-        text: t("menu.agenda"),
-        sectionId: "agenda",
-      }),
-    },
     {
       ...(config.SHOW_SPEAKERS && {
         text: t("menu.speakers"),
         sectionId: "speakers",
       }),
     },
+    {
+      ...(config.SHOW_AGENDA && {
+        text: t("menu.agenda"),
+        sectionId: "agenda",
+      }),
+    },
+
+    { text: t("menu.previous"), sectionId: "previous" },
     { text: t("menu.sponsors"), sectionId: "sponsors" },
     { text: t("menu.contact"), sectionId: "contact" },
   ].filter(({ text }) => text);
@@ -80,8 +72,10 @@ const NavBar = () => {
           <Flex
             marginBottom="auto"
             marginTop="auto"
-            marginLeft="15%"
+            marginLeft="5%"
             width="50%"
+            gap="10px"
+            minWidth="570px"
             justifyContent="space-between"
           >
             {menu.map(({ text, sectionId }) => (
@@ -89,7 +83,7 @@ const NavBar = () => {
                 key={text}
                 textTransform="capitalize"
                 color="whiteAlpha.900"
-                fontSize="xl"
+                fontSize={["sm", "sm", "lg", "xl"]}
                 cursor="pointer"
                 height="30px"
                 onClick={() => sectionId && scrollToSection(sectionId)}
@@ -113,19 +107,19 @@ const Burger = () => {
 
   const menu = [
     { text: t("menu.about"), sectionId: "about" },
-    { text: t("menu.previous"), sectionId: "previous" },
-    {
-      ...(config.SHOW_AGENDA && {
-        text: t("menu.agenda"),
-        sectionId: "agenda",
-      }),
-    },
     {
       ...(config.SHOW_SPEAKERS && {
         text: t("menu.speakers"),
         sectionId: "speakers",
       }),
     },
+    {
+      ...(config.SHOW_AGENDA && {
+        text: t("menu.agenda"),
+        sectionId: "agenda",
+      }),
+    },
+    { text: t("menu.previous"), sectionId: "previous" },
     { text: t("menu.sponsors"), sectionId: "sponsors" },
     { text: t("menu.contact"), sectionId: "contact" },
   ].filter(({ text }) => text);
@@ -154,7 +148,7 @@ const Burger = () => {
             <MenuList>
               {menu.map(({ text, sectionId }) => (
                 <MenuItem
-                  key="text"
+                  key={text}
                   onClick={() => sectionId && scrollToSection(sectionId)}
                 >
                   {text}
