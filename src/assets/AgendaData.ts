@@ -21,8 +21,9 @@ export const SATURDAY_AGENDA = [
   {
     start: "12:00",
     end: "12:50",
-    title: "Szczegóły wkrótce",
-    author: "",
+    title: "Jądro Linuksa i wzrost złożoności",
+    author: "Rafał Wysocki",
+    description: ["Rzeczy, z którymi mamy do czynienia, z reguły stają się coraz bardziej skomplikowane z upływem czasu. Jest to naturalne zjawisko, które dotyczy także oprogramowania komputerowego, a w tym jądra Linuksa. Wzrost złożoności jest nieunikniony i trzeba sobie z nim radzić, ale niekiedy staje się prawdziwym problemem oraz stanowi barierę dla rozwoju w pewnych kierunkach, więc wskazane jest unikanie go, o ile to możliwe. Opowiem o tym z jakich powodów i w jakim tempie rośnie złożoność jądra Linuksa, a także o tym jak można ten wzrost złożoności (do pewnego stopnia) kontrolować."]
   },
   {
     start: "13:00",

@@ -6,6 +6,8 @@ import Mewp from "./mewp.jpg";
 import Siewca from "./siewca.jpg";
 import Vovcia from "./vovcia.png";
 import KamilGalek from "./Kamil_Galek.jpg";
+import RJW from './RJW.jpg';
+
 export const SPEAKERS: SpeakerProps[] = [
   {
     image: FilipDrapejkowski,
@@ -34,15 +36,15 @@ export const SPEAKERS: SpeakerProps[] = [
     ],
   },
   {
-    image: "",
+    image: RJW,
     urls: {
       website: "",
       twitter: "",
       linkedin: "",
       github: "",
     },
-    name: "",
-    description: [""],
+    name: "Rafał Wysocki",
+    description: ["Jestem opiekunem infrastruktury sterującej wykorzystaniem energii (power management) i kontrolą temperatury (thermal control) oraz kodu implementującego specyfikację ACPI w jądrze Linuksa. Zacząłem pracować nad jądrem Linuksa w 2005 roku, natomiast opiekunem pierwszego podsystemu w nim zostałem w 2009 roku. Obecnie pracuję w firmie Intel (od 2012 roku), w grupie odpowiadającej za wsparcie dla technologii Intela w jądrze Linuksa, przede wszystkim nad kodem źródłowym jądra. Zanim dołączyłem do Intela, pracowałem na Wydziale Fizyki Uniwersytetu Warszawskiego (z formalnego wykształcenia jestem fizykiem), a wcześniej w XXVII Liceum Ogólnokształcącym im. T. Czackiego w Warszawie (byłem nauczycielem informatyki i fizyki). Prowadziłem także własny biznes związany ze wsparciem IT dla firm."],
   },
   {
     image: KamilGalek,
