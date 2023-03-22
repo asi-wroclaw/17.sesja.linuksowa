@@ -21,15 +21,15 @@ const Sponsorship = () => {
 
   const sponsorsAndOrganizations = [
     {
-      title: "Sponsorzy",
+      title: "sponsors",
       logos: [],
     },
     {
-      title: "Patroni",
+      title: "patrons",
       logos: [],
     },
     {
-      title: "Organizatorzy",
+      title: t("organizers"),
       logos: [
         { image: asi, href: "https://www.asi.wroclaw.pl/" },
         { image: pwr, href: "https://pwr.edu.pl/" },
@@ -92,22 +92,34 @@ const Sponsorship = () => {
         </VStack>
       </Center>
       {sponsorsAndOrganizations.map(({ logos, title }) => (
-        <Box key={title} width="100%" minHeight="30vh">
-          <VStack gap="10">
-            <Heading
-              zIndex="0"
-              fontWeight="bold"
-              as="h2"
-              textAlign="center"
-              fontSize={["xl", "3xl", "5xl"]}
+        <>
+          {logos.length !== 0 && (
+            <Box
+              marginTop="100px"
+              marginBottom="100px"
+              key={title}
+              width="100%"
+              minHeight="30vh"
             >
-              {title}
-            </Heading>
-            {logos.map(({ image, href }) => (
-              <NextImage key={href} alt={`${title} image`} src={image} />
-            ))}
-          </VStack>
-        </Box>
+              <VStack gap="100px">
+                <Heading
+                  zIndex="0"
+                  fontWeight="bold"
+                  as="h2"
+                  textAlign="center"
+                  fontSize={["xl", "3xl", "5xl"]}
+                >
+                  {title}
+                </Heading>
+                {logos.map(({ image, href }) => (
+                  <Link key={href} isExternal href={href} target="_blank">
+                    <NextImage alt={`${title} image`} src={image} />
+                  </Link>
+                ))}
+              </VStack>
+            </Box>
+          )}
+        </>
       ))}
     </Box>
   );
