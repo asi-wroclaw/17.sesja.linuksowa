@@ -23,7 +23,9 @@ export const SATURDAY_AGENDA = [
     end: "12:50",
     title: "Jądro Linuksa i wzrost złożoności",
     author: "Rafał Wysocki",
-    description: ["Rzeczy, z którymi mamy do czynienia, z reguły stają się coraz bardziej skomplikowane z upływem czasu. Jest to naturalne zjawisko, które dotyczy także oprogramowania komputerowego, a w tym jądra Linuksa. Wzrost złożoności jest nieunikniony i trzeba sobie z nim radzić, ale niekiedy staje się prawdziwym problemem oraz stanowi barierę dla rozwoju w pewnych kierunkach, więc wskazane jest unikanie go, o ile to możliwe. Opowiem o tym z jakich powodów i w jakim tempie rośnie złożoność jądra Linuksa, a także o tym jak można ten wzrost złożoności (do pewnego stopnia) kontrolować."]
+    description: [
+      "Rzeczy, z którymi mamy do czynienia, z reguły stają się coraz bardziej skomplikowane z upływem czasu. Jest to naturalne zjawisko, które dotyczy także oprogramowania komputerowego, a w tym jądra Linuksa. Wzrost złożoności jest nieunikniony i trzeba sobie z nim radzić, ale niekiedy staje się prawdziwym problemem oraz stanowi barierę dla rozwoju w pewnych kierunkach, więc wskazane jest unikanie go, o ile to możliwe. Opowiem o tym z jakich powodów i w jakim tempie rośnie złożoność jądra Linuksa, a także o tym jak można ten wzrost złożoności (do pewnego stopnia) kontrolować.",
+    ],
   },
   {
     start: "13:00",
@@ -67,8 +69,18 @@ export const SATURDAY_AGENDA = [
   {
     start: "16:00",
     end: "16:50",
-    title: "Szczegóły wkrótce",
-    author: "",
+    title: "Pstryk i dzieje się magia czyli o CECu słów kilka",
+    author: "Krzysztof Opasiak",
+  },
+  {
+    start: "17:00",
+    end: "17:50",
+    title:
+      "Ciekawe podejście do integracji technologii chmurowych: Terraform, Ansible i Helm",
+    author: "Piotr Pyciński",
+    description: [
+      `Terraform zarządza infrastrukturą, Ansible konfiguruje serwery, a Helm uruchamia aplikacje na klastrach Kubernetesa. Chociaż wydają się to być niezależne aplikacje, mają wiele wspólnych elementów i często zależą od siebie. Podczas prezentacji przedstawię pomysł, jak zintegrować te technologie przy użyciu jednego wspólnego źródła prawdy (ang. "source of truth").`,
+    ],
   },
 ];
 

@@ -6,7 +6,8 @@ import Mewp from "./mewp.jpg";
 import Siewca from "./siewca.jpg";
 import Vovcia from "./vovcia.png";
 import KamilGalek from "./Kamil_Galek.jpg";
-import RJW from './RJW.jpg';
+import RJW from "./RJW.jpg";
+import Pycinski from "./Pycinski.png";
 
 export const SPEAKERS: SpeakerProps[] = [
   {
@@ -44,7 +45,9 @@ export const SPEAKERS: SpeakerProps[] = [
       github: "",
     },
     name: "Rafał Wysocki",
-    description: ["Jestem opiekunem infrastruktury sterującej wykorzystaniem energii (power management) i kontrolą temperatury (thermal control) oraz kodu implementującego specyfikację ACPI w jądrze Linuksa. Zacząłem pracować nad jądrem Linuksa w 2005 roku, natomiast opiekunem pierwszego podsystemu w nim zostałem w 2009 roku. Obecnie pracuję w firmie Intel (od 2012 roku), w grupie odpowiadającej za wsparcie dla technologii Intela w jądrze Linuksa, przede wszystkim nad kodem źródłowym jądra. Zanim dołączyłem do Intela, pracowałem na Wydziale Fizyki Uniwersytetu Warszawskiego (z formalnego wykształcenia jestem fizykiem), a wcześniej w XXVII Liceum Ogólnokształcącym im. T. Czackiego w Warszawie (byłem nauczycielem informatyki i fizyki). Prowadziłem także własny biznes związany ze wsparciem IT dla firm."],
+    description: [
+      "Jestem opiekunem infrastruktury sterującej wykorzystaniem energii (power management) i kontrolą temperatury (thermal control) oraz kodu implementującego specyfikację ACPI w jądrze Linuksa. Zacząłem pracować nad jądrem Linuksa w 2005 roku, natomiast opiekunem pierwszego podsystemu w nim zostałem w 2009 roku. Obecnie pracuję w firmie Intel (od 2012 roku), w grupie odpowiadającej za wsparcie dla technologii Intela w jądrze Linuksa, przede wszystkim nad kodem źródłowym jądra. Zanim dołączyłem do Intela, pracowałem na Wydziale Fizyki Uniwersytetu Warszawskiego (z formalnego wykształcenia jestem fizykiem), a wcześniej w XXVII Liceum Ogólnokształcącym im. T. Czackiego w Warszawie (byłem nauczycielem informatyki i fizyki). Prowadziłem także własny biznes związany ze wsparciem IT dla firm.",
+    ],
   },
   {
     image: KamilGalek,
@@ -143,6 +146,19 @@ export const SPEAKERS: SpeakerProps[] = [
     name: `Błażej Święcicki`,
     description: [
       "Błażej Święcicki - pan maruda, niszczyciel dobrej zabawy, pogromca uśmiechów dzieci — innymi słowy, urodzony sysadmin. Technologiczny perfekcjonista, wiecznie głoszący zalety niszowych rozwiązań nad popularnymi. Uzależniony od NixOSa, inne dystrybucje straciły dla niego sens.",
+    ],
+  },
+  {
+    image: Pycinski,
+    urls: {
+      website: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+    },
+    name: `Piotr Pyciński`,
+    description: [
+      "15-letnie doświadczenie jako administrator systemów. Moje początki miały miejsce w czasach, gdy praca przy konsoli i fizycznych serwerach było standardem, a szum wentylatorów towarzyszył codziennym czynnościom. Obecnie staram się odnaleźć w świecie bujającym w chmurach i często podkreślam, że nie jest to uniwersalne rozwiązanie dla wszystkich problemów. Poza pracą lubię żeglować po morzach i oceanach oraz pracuję jako ratownik medyczny w Krakowskim Pogotowiu Ratunkowym.",
     ],
   },
 ];

@@ -41,5 +41,8 @@
         "speakers":"Prelegenci",
         "sponsors":"Patroni",
         "contact":"Kontakt"
-    }
+    },
+    "Organizers":"Organizatorzy",
+    "sponsors":"Sponsorzy",
+    "patrons":"Patroni"
 }

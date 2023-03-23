@@ -42,6 +42,9 @@
         "speakers":"Speakers",
         "sponsors":"Patrons",
         "contact":"Contact us"
-    }
+    },
+    "organizers":"Organizers",
+    "sponsors":"Sponsors",
+    "patrons":"Patrons"
 
 }
