@@ -71,6 +71,15 @@ export const SATURDAY_AGENDA = [
     end: "16:50",
     title: "Pstryk i dzieje się magia czyli o CECu słów kilka",
     author: "Krzysztof Opasiak",
+    description: [
+      "Pilot.",
+      "Jeden, by wszystkimi rządzić, jeden by wszystkie włączyć,",
+      "Jeden, by wszystkimi sterować i na końcu wyłączyć.",
+      "",
+      "Ale jak to właściwie się dzieje że pilot od telewizora pozwala nam sterować nie tylko telewizorem ale również soundbarem, odtwarzaczem blu-ray i dekoderem? Czy to magia? Nie! To zasługa HDMI CEC!",
+      "",
+      "Opowiem o tym czym HDMI CEC tak właściwie jest i jak działa. A przede wszystkim o tym dlaczego to nie pilot steruje tymi urządzeniami tylko telewizor. Warstwa po warstwie będziemy obierać stos CECa jak cebulę od kernela aż po userspace nie roniąc przy tym ani jednej łzy.",
+    ],
   },
   {
     start: "17:00",

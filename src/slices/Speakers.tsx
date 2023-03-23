@@ -138,7 +138,7 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
   return (
     <Flex zIndex="3" cursor="pointer" onClick={onOpen}>
       <Box>
-        <Box w={300} h={300} position="relative">
+        <Box w={300} h={330} position="relative">
           <Image
             alt={`${name} image`}
             fill
