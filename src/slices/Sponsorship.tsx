@@ -112,7 +112,13 @@ const Sponsorship = () => {
                   {title}
                 </Heading>
                 {logos.map(({ image, href }) => (
-                  <Link key={href} isExternal href={href} target="_blank">
+                  <Link
+                    maxWidth="70%"
+                    key={href}
+                    isExternal
+                    href={href}
+                    target="_blank"
+                  >
                     <NextImage alt={`${title} image`} src={image} />
                   </Link>
                 ))}
