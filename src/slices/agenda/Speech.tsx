@@ -37,6 +37,7 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
         "170px 1fr auto",
         "200px 1fr auto",
       ]}
+      bg={isOpen ? "black" : undefined}
       paddingBottom={3}
       paddingTop={3}
       borderBottom={`0.25rem ${theme.colors.primary} solid`}

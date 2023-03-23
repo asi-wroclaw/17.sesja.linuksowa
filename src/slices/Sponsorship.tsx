@@ -13,6 +13,7 @@ import asi from "../assets/loga/logo-asi.png";
 import antmicro from "../assets/loga/logo_antmicro.svg";
 import pwr from "../assets/loga/logo-pwr.png";
 import NextImage, { StaticImageData } from "next/image";
+import React from "react";
 
 const Sponsorship = () => {
   const { t } = useTranslation("common");
@@ -92,7 +93,7 @@ const Sponsorship = () => {
         </VStack>
       </Center>
       {sponsorsAndOrganizations.map(({ logos, title }) => (
-        <>
+        <React.Fragment key={title}>
           {logos.length !== 0 && (
             <Box
               marginTop="100px"
@@ -125,7 +126,7 @@ const Sponsorship = () => {
               </VStack>
             </Box>
           )}
-        </>
+        </React.Fragment>
       ))}
     </Box>
   );
