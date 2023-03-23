@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import asi from "../assets/loga/logo-asi.png";
-import manus from "../assets/loga/logo-manus.png";
+import antmicro from "../assets/loga/logo_antmicro.svg";
 import pwr from "../assets/loga/logo-pwr.png";
 import NextImage, { StaticImageData } from "next/image";
 
@@ -22,7 +22,7 @@ const Sponsorship = () => {
   const sponsorsAndOrganizations = [
     {
       title: "sponsors",
-      logos: [],
+      logos: [{ image: antmicro, href: "https://antmicro.com/" }],
     },
     {
       title: "patrons",
