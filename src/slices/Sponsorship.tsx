@@ -22,14 +22,14 @@ const Sponsorship = () => {
 
   const sponsorsAndOrganizations = [
     {
-      title: "sponsors",
+      title: t("sponsors"),
       logos: [
         { image: antmicro, href: "https://antmicro.com/" },
         { image: mb, href: "https://www.masterborn.com/" }
       ],
     },
     {
-      title: "patrons",
+      title: t("patrons"),
       logos: [],
     },
     {
