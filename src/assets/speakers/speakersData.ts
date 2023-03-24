@@ -8,6 +8,7 @@ import Vovcia from "./vovcia.png";
 import KamilGalek from "./Kamil_Galek.jpg";
 import RJW from "./RJW.jpg";
 import Pycinski from "./Pycinski.png";
+import Dorosz from "./Dorosz.jpg";
 
 export const SPEAKERS: SpeakerProps[] = [
   {
@@ -64,7 +65,7 @@ export const SPEAKERS: SpeakerProps[] = [
     ],
   },
   {
-    image: "",
+    image: Dorosz,
     urls: {
       website: "",
       twitter: "",
@@ -72,7 +73,7 @@ export const SPEAKERS: SpeakerProps[] = [
       github: "",
     },
     name: "Filip Dorosz",
-    description: [""],
+    description: ["DevOps Engineer w OVHcloud. Posiada ponad 7 letnie doświadczenie w Branży IT. Obszar cloud storage w oparciu o technologię Ceph. Python and Puppet master. Observability freak. Sympatyk Open Source. W debugowaniu pomaga mu muzyka synthwave."],
   },
   {
     image: "",

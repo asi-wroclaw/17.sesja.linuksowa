@@ -141,7 +141,18 @@ export const SUNDAY_AGENDA = [
   {
     start: "15:00",
     end: "15:50",
-    title: "Szczegóły wkrótce",
-    author: "",
+    title: "Prometheus 101: Jak uwolnić (potencjał) Prometeusza?",
+    author: "Filip Dorosz",
+    description: [
+      "Uczestnicy będą mieli okazję dowiedzieć się co to jest oprogramowanie Prometheus, po co zbierać metryki, jak używać Prometheusa do monitorowania infrastruktury oraz jak uwolnić jego potencjał poprzez remote_write i oprogramowanie Mimir. Wszystko oparte o moje doświadczenia z Prometheusem z firmy OVHcloud gdzie pracuję."
+    ]
+  },
+  {
+    start: "16:00",
+    end: "17:00",
+    title: "Lighting talks",
+    description: [
+      "Chciałbyś poruszyć ważny dla Ciebie temat, lub przekazać myśl do społeczności Open Source? Przyjdź i zrób to!"
+    ]
   },
 ];
