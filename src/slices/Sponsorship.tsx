@@ -4,15 +4,15 @@ import {
   VStack,
   Center,
   Image,
-  Text,
   Link,
   Heading,
 } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import asi from "../assets/loga/logo-asi.png";
 import antmicro from "../assets/loga/logo_antmicro.svg";
+import mb from "../assets/loga/logo-mb.svg";
 import pwr from "../assets/loga/logo-pwr.png";
-import NextImage, { StaticImageData } from "next/image";
+import NextImage from "next/image";
 import React from "react";
 
 const Sponsorship = () => {
@@ -23,7 +23,10 @@ const Sponsorship = () => {
   const sponsorsAndOrganizations = [
     {
       title: "sponsors",
-      logos: [{ image: antmicro, href: "https://antmicro.com/" }],
+      logos: [
+        { image: antmicro, href: "https://antmicro.com/" },
+        { image: mb, href: "https://www.masterborn.com/" }
+      ],
     },
     {
       title: "patrons",
@@ -114,7 +117,7 @@ const Sponsorship = () => {
                 </Heading>
                 {logos.map(({ image, href }) => (
                   <Link
-                    maxWidth="70%"
+                    maxWidth="min(70%, 400px)"
                     key={href}
                     isExternal
                     href={href}
