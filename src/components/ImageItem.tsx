@@ -15,6 +15,7 @@ const ImageItem = ({ imageSrc, title, text }: ImageItemProps) => {
         height={270}
         color="white"
         alt={`${title} image`}
+        sizes="270px"
         src={imageSrc}
       />
       <Heading

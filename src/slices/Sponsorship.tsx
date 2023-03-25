@@ -1,5 +1,5 @@
 import DefaultButton from "@/components/DefaultButton";
-import { Box, VStack, Center, Image, Link, Heading } from "@chakra-ui/react";
+import { Box, VStack, Center, Link, Heading } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import asi from "../assets/loga/logo-asi.png";
 import antmicro from "../assets/loga/logo_antmicro.svg";
@@ -45,15 +45,22 @@ const Sponsorship = () => {
       margin="0"
       zIndex="2"
     >
-      <Image
-        src="/bg_oferta.jpeg"
+      <Box
+       width="100%"
+       height={["50vh", "40vh"]}
+       position="absolute">
+      <NextImage
+        src="/bg_oferta.webp"
         alt="sponsorship background"
         objectFit="cover"
-        width="100%"
-        height={["50vh", "40vh"]}
+        fill
+        // width="100vh"
+        // width="100%"
+        // height={["50vh", "40vh"]}
         objectPosition="center"
-        position="absolute"
+        // position="absolute"
       />
+      </Box>
       <Center height={["50vh", "40vh"]}>
         <VStack gap={3}>
           <Heading
