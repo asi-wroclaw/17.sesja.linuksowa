@@ -9,6 +9,7 @@ import KamilGalek from "./Kamil_Galek.jpg";
 import RJW from "./RJW.jpg";
 import Pycinski from "./Pycinski.png";
 import Dorosz from "./Dorosz.jpg";
+import Opasiak from "./Opasiak.jpeg";
 
 export const SPEAKERS: SpeakerProps[] = [
   {
@@ -78,7 +79,7 @@ export const SPEAKERS: SpeakerProps[] = [
     ],
   },
   {
-    image: "",
+    image: Opasiak,
     urls: {
       website: "",
       twitter: "",
@@ -86,7 +87,9 @@ export const SPEAKERS: SpeakerProps[] = [
       github: "",
     },
     name: "Krzysztof Opasiak",
-    description: [""],
+    description: [
+      "Programista Kernela w Neat. Wielbiciel open source. Fanatyk USB i wszelkich innych portów, które można znaleźć we współczesnych SBC.",
+    ],
   },
   {
     image: "",

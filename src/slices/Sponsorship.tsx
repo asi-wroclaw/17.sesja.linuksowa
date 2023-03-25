@@ -1,12 +1,5 @@
 import DefaultButton from "@/components/DefaultButton";
-import {
-  Box,
-  VStack,
-  Center,
-  Image,
-  Link,
-  Heading,
-} from "@chakra-ui/react";
+import { Box, VStack, Center, Image, Link, Heading } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import asi from "../assets/loga/logo-asi.png";
 import antmicro from "../assets/loga/logo_antmicro.svg";
@@ -25,7 +18,7 @@ const Sponsorship = () => {
       title: t("sponsors"),
       logos: [
         { image: antmicro, href: "https://antmicro.com/" },
-        { image: mb, href: "https://www.masterborn.com/" }
+        { image: mb, href: "https://www.masterborn.com/" },
       ],
     },
     {
