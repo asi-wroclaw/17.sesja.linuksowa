@@ -36,7 +36,7 @@ const NavBarStyle: StyleProps = {
 const NavBar = () => {
   const theme = useTheme();
   const { t }: { t: (key: string) => string } = useTranslation("common");
-
+  const headId = "head";
   const menu = [
     { text: t("menu.about"), sectionId: "about" },
     {
@@ -66,7 +66,14 @@ const NavBar = () => {
           height="100%"
           justifyContent="space-between"
         >
-          <Box width="230px" height="56px" marginTop="auto" marginBottom="auto">
+          <Box
+            width="230px"
+            height="56px"
+            marginTop="auto"
+            marginBottom="auto"
+            onClick={() => scrollToSection(headId)}
+            cursor="pointer"
+          >
             <Image alt="sesja linuksowa" src={logo} />
           </Box>
           <Flex
@@ -85,6 +92,7 @@ const NavBar = () => {
                 color="whiteAlpha.900"
                 fontSize={["sm", "sm", "lg", "xl"]}
                 cursor="pointer"
+                _hover={{ color: theme.colors.primary }}
                 height="30px"
                 onClick={() => sectionId && scrollToSection(sectionId)}
               >
@@ -96,13 +104,13 @@ const NavBar = () => {
         </Flex>
       </Hide>
       <Show below="lg">
-        <Burger />
+        <Burger headId={headId} />
       </Show>
     </Box>
   );
 };
 
-const Burger = () => {
+const Burger = ({ headId }: { headId: string }) => {
   const { t } = useTranslation("common");
 
   const menu = [
@@ -132,7 +140,14 @@ const Burger = () => {
       height="100%"
       alignItems="center"
     >
-      <Box width="172px" height="42px" marginTop="auto" marginBottom="auto">
+      <Box
+        width="172px"
+        height="42px"
+        marginTop="auto"
+        marginBottom="auto"
+        onClick={() => scrollToSection(headId)}
+        cursor="pointer"
+      >
         <Image alt="sesja linuksowa" src={logo} />
       </Box>
 

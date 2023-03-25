@@ -92,7 +92,7 @@ const HeadDescription = () => {
 
 const HeadSlice = () => {
   return (
-    <Box as="section" {...HeadContainerStyle} m={0}>
+    <Box as="section" id="head" {...HeadContainerStyle} m={0}>
       <Stack
         height="inherit"
         justifyContent="space-evenly"
