@@ -61,7 +61,6 @@ const getImageSize = (
   maxSizes: number[] = [500, 400]
 ): number[] => {
   if (sizes.length !== 2) return sizes;
-  console.log(maxSizes);
   const [width, height] = sizes;
   const [maxWidth, maxHeight] = maxSizes;
   if (width > height) {
