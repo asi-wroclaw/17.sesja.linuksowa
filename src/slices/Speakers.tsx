@@ -23,6 +23,7 @@ import linkedin from "../assets/socials/linkedin.svg";
 import website from "../assets/socials/website.svg";
 import { useTheme } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
+import { useMediaQuery } from "@chakra-ui/react";
 
 type SocialUrls = {
   website: string;
@@ -60,6 +61,7 @@ const getImageSize = (
   maxSizes: number[] = [500, 400]
 ): number[] => {
   if (sizes.length !== 2) return sizes;
+  console.log(maxSizes);
   const [width, height] = sizes;
   const [maxWidth, maxHeight] = maxSizes;
   if (width > height) {
@@ -86,8 +88,14 @@ const SpeakerModal = ({
   description?: string[];
 }) => {
   const { t } = useTranslation("common");
+  const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
   const { height, width } = image as { height: number; width: number };
-  const [imageWidth, imageHeight] = getImageSize([width, height]);
+  const isLongDescription = (description ?? []).join("").length > 500;
+  const isALotOfContent = isLongDescription && isSmallerThan800;
+  const [imageWidth, imageHeight] = getImageSize(
+    [width, height],
+    isALotOfContent ? [200, 200] : [500, 400]
+  );
   return (
     <DarkMode>
       <Modal
