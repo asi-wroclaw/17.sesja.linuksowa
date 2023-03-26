@@ -49,9 +49,8 @@ const Sponsorship = () => {
         <NextImage
           src="/bg_oferta.webp"
           alt="sponsorship background"
-          objectFit="cover"
+          style={{ objectFit: "cover", objectPosition: "center" }}
           fill
-          objectPosition="center"
         />
       </Box>
       <Center height={["50vh", "40vh"]}>

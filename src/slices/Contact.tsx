@@ -65,24 +65,27 @@ ${message}
       </Heading>
       <form onSubmit={handleSubmit}>
         <FormControl display={"flex"} flexDir="column">
-          <FormLabel mt={4}>{t("formName")}</FormLabel>
+          <FormLabel htmlFor="contact-name" mt={4}>{t("formName")}</FormLabel>
           <Input
             value={name}
             onChange={(event) => setName(event.target.value)}
+            id="contact-name"
             type="text"
           />
-          <FormLabel mt={4}>{t("email")}</FormLabel>
+          <FormLabel htmlFor="contact-email" mt={4}>{t("email")}</FormLabel>
           <Input
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="email"
+            id="contact-email"
           />
-          <FormLabel mt={4}>{t("message")}</FormLabel>
+          <FormLabel htmlFor="contact-message" mt={4}>{t("message")}</FormLabel>
           <Textarea
             required
             value={message}
             onChange={(event) => setMessage(event.target.value)}
             size="lg"
+            id="contact-message"
             placeholder={t("formPlaceholder")}
           />
           <DefaultButton

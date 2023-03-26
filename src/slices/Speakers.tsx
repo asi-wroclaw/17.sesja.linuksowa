@@ -163,7 +163,7 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
             margin="auto"
             textAlign="center"
             fontSize="3xl"
-            as="h5"
+            as="h3"
             color="whiteAlpha.900"
           >
             {name}
