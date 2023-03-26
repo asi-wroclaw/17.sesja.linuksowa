@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Image from "next/image";
-import logo from "../assets/logo-duze-pl.png";
+import logo from "../assets/logo-duze-pl.webp";
 import { useTheme } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import Lang from "@/components/Lang";

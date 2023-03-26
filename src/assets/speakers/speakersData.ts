@@ -1,15 +1,15 @@
 import { SpeakerProps } from "@/slices/Speakers";
-import FilipDrapejkowski from "./Filip_Drapejkowski.jpg";
-import InformatykZakladowy from "./Informatyk_Zakladowy.jpg";
-import CezaryDynak from "./Cezary_Dynak.png";
-import Mewp from "./mewp.jpg";
-import Siewca from "./siewca.jpg";
-import Vovcia from "./vovcia.png";
-import KamilGalek from "./Kamil_Galek.jpg";
-import RJW from "./RJW.jpg";
-import Pycinski from "./Pycinski.png";
-import Dorosz from "./Dorosz.jpg";
-import Opasiak from "./Opasiak.jpeg";
+import FilipDrapejkowski from "./Filip_Drapejkowski.webp";
+import InformatykZakladowy from "./Informatyk_Zakladowy.webp";
+import CezaryDynak from "./Cezary_Dynak.webp";
+import Mewp from "./mewp.webp";
+import Siewca from "./siewca.webp";
+import Vovcia from "./vovcia.webp";
+import KamilGalek from "./Kamil_Galek.webp";
+import RJW from "./RJW.webp";
+import Pycinski from "./Pycinski.webp";
+import Dorosz from "./Dorosz.webp";
+import Opasiak from "./Opasiak.webp";
 
 export const SPEAKERS: SpeakerProps[] = [
   {

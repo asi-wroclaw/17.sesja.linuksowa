@@ -1,6 +1,6 @@
 import { Box, StyleProps } from "@chakra-ui/react";
 import Image from "next/image";
-import pinguin from "../assets/bg_pingwin.png";
+import pinguin from "../assets/bg_pingwin.webp";
 import { Stack, VStack, Heading } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 import { Show } from "@chakra-ui/react";
@@ -111,7 +111,11 @@ const HeadSlice = () => {
             width="30%"
             height="20%"
           >
-            <Image alt="pinguin" src={pinguin} />
+            <Image
+              priority
+              alt="pinguin"
+              src={pinguin}
+            />
           </VStack>
         </Show>
         <HeadDescription />
@@ -123,7 +127,7 @@ const HeadSlice = () => {
             marginTop="auto"
             height="100vh"
           >
-            <Image alt="pinguin" src={pinguin} />
+            <Image priority alt="pinguin" src={pinguin} />
           </VStack>
         </Show>
       </Stack>
