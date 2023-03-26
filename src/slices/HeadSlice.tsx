@@ -111,11 +111,11 @@ const HeadSlice = () => {
             width="30%"
             height="20%"
           >
-            <Image       
-            priority
-            sizes="(max-width: 1000px) 230px,
-             0px"
-               alt="pinguin" src={pinguin} />
+            <Image
+              priority
+              alt="pinguin"
+              src={pinguin}
+            />
           </VStack>
         </Show>
         <HeadDescription />
@@ -127,7 +127,7 @@ const HeadSlice = () => {
             marginTop="auto"
             height="100vh"
           >
-            <Image  priority alt="pinguin" src={pinguin} />
+            <Image priority alt="pinguin" src={pinguin} />
           </VStack>
         </Show>
       </Stack>
