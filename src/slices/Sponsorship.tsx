@@ -7,12 +7,16 @@ import mb from "../assets/loga/logo-mb.svg";
 import pwr from "../assets/loga/logo-pwr.png";
 import NextImage, { StaticImageData } from "next/image";
 import hswro from "../assets/loga/logo-hs.svg";
-import programistamag from "../assets/loga/logo-programistamag.png";
+import programistamag from "../assets/loga/logo-programistamag.jpg";
 import React from "react";
 
 type SponsorshipEntity = {
   title: string;
-  logos: { image: StaticImageData; href: string; width?: number }[];
+  logos: {
+    image: { default: StaticImageData } | StaticImageData;
+    href: string;
+    width?: number;
+  }[];
 };
 
 const Sponsorship = () => {
@@ -43,6 +47,7 @@ const Sponsorship = () => {
       ],
     },
   ] as SponsorshipEntity[];
+
   return (
     <Box
       id="sponsors"
