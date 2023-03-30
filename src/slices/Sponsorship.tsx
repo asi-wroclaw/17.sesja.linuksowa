@@ -8,6 +8,7 @@ import pwr from "../assets/loga/logo-pwr.png";
 import NextImage, { StaticImageData } from "next/image";
 import hswro from "../assets/loga/logo-hs.svg";
 import programistamag from "../assets/loga/logo-programistamag.jpg";
+import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 
 type SponsorshipEntity = {
@@ -23,6 +24,7 @@ const Sponsorship = () => {
   const { t } = useTranslation("common");
   const title = t("sponsorshipTitle");
   const description = t("sponsorshipDescription");
+  const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
 
   const sponsorsAndOrganizations = [
     {
@@ -35,7 +37,11 @@ const Sponsorship = () => {
     {
       title: t("patrons"),
       logos: [
-        { image: hswro, href: "https://www.hswro.org/", width: 270 },
+        {
+          image: hswro,
+          href: "https://www.hswro.org/",
+          width: isSmallerThan800 ? 180 : 270,
+        },
         { image: programistamag, href: "https://programistamag.pl/" },
       ],
     },
