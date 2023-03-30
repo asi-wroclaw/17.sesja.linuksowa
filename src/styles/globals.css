@@ -41,21 +41,21 @@
 }
 @font-face {
   font-family: MontserratSemiBold;
-  src: url("../assets/font/Montserrat-SemiBold.ttf");
+  src: url("/font/Montserrat-SemiBold.ttf");
   font-weight: 700;
   font-style: bold;
 }
 
 @font-face {
   font-family: MontserratLight;
-  src: url("../assets/font/Montserrat-Light.ttf");
+  src: url("/font/Montserrat-Light.ttf");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/font/Montserrat-Regular.ttf");
+  src: url("/font/Montserrat-Regular.ttf");
   font-weight: 500;
   font-style: normal;
 }

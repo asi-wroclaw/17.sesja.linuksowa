@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import HeadSlice from "../slices/HeadSlice";
 import AboutUs from "../slices/AboutUs";
 import config from "../config";
@@ -13,8 +12,6 @@ import { SPEAKERS } from "../assets/speakers/speakersData";
 import NavBar from "@/components/NavBar";
 
 import ParticlesBackground from "@/components/ParticlesBackground";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const Main = () => {
   return (
@@ -72,6 +69,17 @@ export default function Home() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <link
+          rel="preload"
+          as="font"
+          href="/font/Montserrat-SemiBold.ttf"
+        ></link>
+        <link rel="preload" as="font" href="/font/Montserrat-Light.ttf"></link>
+        <link
+          rel="preload"
+          as="font"
+          href="/font/Montserrat-Regular.ttf"
+        ></link>
         <meta
           name="google-site-verification"
           content="_XX2o2FKgUfRENSsUKxtqytQmXUjiPSlIVqFgmlXdts"
