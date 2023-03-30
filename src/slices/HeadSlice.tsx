@@ -96,40 +96,23 @@ const HeadSlice = () => {
       <Stack
         height="inherit"
         justifyContent="space-evenly"
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", lg: "row-reverse" }}
         position="absolute"
         width="100%"
         top="0"
         zIndex="2"
       >
-        <Show below="lg">
-          <VStack
-            margin="auto"
-            marginTop="8rem"
-            justifyContent="center"
-            maxWidth="700px"
-            width="30%"
-            height="20%"
-          >
-            <Image
-              priority
-              alt="pinguin"
-              src={pinguin}
-            />
-          </VStack>
-        </Show>
+        <VStack
+          margin="auto"
+          justifyContent="center"
+          marginTop={{ base: "8rem", lg: "auto" }}
+          maxWidth={{ base: "550px", lg: "700px" }}
+          height={{ base: "20%", lg: "100vh" }}
+          width={{ base: "30%", lg: "50%" }}
+        >
+          <Image priority alt="pinguin" src={pinguin} />
+        </VStack>
         <HeadDescription />
-        <Show above="lg">
-          <VStack
-            width="50%"
-            justifyContent="center"
-            maxWidth={1627 / 3}
-            marginTop="auto"
-            height="100vh"
-          >
-            <Image priority alt="pinguin" src={pinguin} />
-          </VStack>
-        </Show>
       </Stack>
     </Box>
   );
