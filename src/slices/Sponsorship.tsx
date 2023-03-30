@@ -5,8 +5,15 @@ import asi from "../assets/loga/logo-asi.png";
 import antmicro from "../assets/loga/logo_antmicro.svg";
 import mb from "../assets/loga/logo-mb.svg";
 import pwr from "../assets/loga/logo-pwr.png";
-import NextImage from "next/image";
+import NextImage, { StaticImageData } from "next/image";
+import hswro from "../assets/loga/logo-hs.svg";
+import programistamag from "../assets/loga/logo-programistamag.png";
 import React from "react";
+
+type SponsorshipEntity = {
+  title: string;
+  logos: { image: StaticImageData; href: string; width?: number }[];
+};
 
 const Sponsorship = () => {
   const { t } = useTranslation("common");
@@ -23,7 +30,10 @@ const Sponsorship = () => {
     },
     {
       title: t("patrons"),
-      logos: [],
+      logos: [
+        { image: hswro, href: "https://www.hswro.org/", width: 270 },
+        { image: programistamag, href: "https://programistamag.pl/" },
+      ],
     },
     {
       title: t("organizers"),
@@ -32,7 +42,7 @@ const Sponsorship = () => {
         { image: pwr, href: "https://pwr.edu.pl/" },
       ],
     },
-  ];
+  ] as SponsorshipEntity[];
   return (
     <Box
       id="sponsors"
@@ -97,7 +107,7 @@ const Sponsorship = () => {
               width="100%"
               minHeight="30vh"
             >
-              <VStack gap="100px">
+              <VStack gap="100px" display="flex">
                 <Heading
                   zIndex="0"
                   fontWeight="bold"
@@ -107,7 +117,7 @@ const Sponsorship = () => {
                 >
                   {title}
                 </Heading>
-                {logos.map(({ image, href }) => (
+                {logos.map(({ image, href, width }) => (
                   <Link
                     maxWidth="min(70%, 400px)"
                     key={href}
@@ -115,7 +125,11 @@ const Sponsorship = () => {
                     href={href}
                     target="_blank"
                   >
-                    <NextImage alt={`${title} image`} src={image} />
+                    <NextImage
+                      alt={`${title} image`}
+                      width={width || undefined}
+                      src={image}
+                    />
                   </Link>
                 ))}
               </VStack>
