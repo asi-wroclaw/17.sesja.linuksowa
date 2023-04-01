@@ -4,11 +4,9 @@ import {
   StyleProps,
   Flex,
   Text,
-  Hide,
   Menu,
   MenuButton,
   MenuList,
-  Show,
   MenuItem,
   IconButton,
   LightMode,
@@ -21,6 +19,7 @@ import { useTranslation } from "next-export-i18n";
 import Lang from "@/components/Lang";
 import config from "../config";
 import scrollToSection from "@/utils/scrollToSection";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export const HEADER_HEIGHT = 60;
 
@@ -35,6 +34,7 @@ const NavBarStyle: StyleProps = {
 
 const NavBar = () => {
   const theme = useTheme();
+  const [isSmallerThanLg] = useMediaQuery("(max-width: 62em)");
   const { t }: { t: (key: string) => string } = useTranslation("common");
   const headId = "head";
   const menu = [
@@ -58,57 +58,65 @@ const NavBar = () => {
   ].filter(({ text }) => text);
   return (
     <Box {...NavBarStyle}>
-      <Hide below="lg">
-        <Flex
-          top="0"
-          mt="0"
-          ml="5"
-          height="100%"
-          justifyContent="space-between"
-        >
-          <Box
-            width="230px"
-            height="56px"
-            marginTop="auto"
-            marginBottom="auto"
-            onClick={() => scrollToSection(headId)}
-            cursor="pointer"
-          >
-            <Image alt="sesja linuksowa" src={logo} />
-          </Box>
-          <Flex
-            marginBottom="auto"
-            marginTop="auto"
-            marginLeft="5%"
-            width="50%"
-            gap="10px"
-            minWidth="570px"
-            justifyContent="space-between"
-          >
-            {menu.map(({ text, sectionId }) => (
-              <Text
-                key={text}
-                textTransform="capitalize"
-                color="whiteAlpha.900"
-                fontSize={["sm", "sm", "lg", "xl"]}
-                cursor="pointer"
-                _hover={{ color: theme.colors.primary }}
-                height="30px"
-                onClick={() => sectionId && scrollToSection(sectionId)}
-              >
-                {text}
-              </Text>
-            ))}
-          </Flex>
-          <Lang />
-        </Flex>
-      </Hide>
-      <Show below="lg">
-        <Burger headId={headId} />
-      </Show>
+      {isSmallerThanLg
+        ? <Burger headId={headId} />
+        : <DesktopNavBar headId={headId} menu={menu} />
+      }
     </Box>
   );
 };
+
+type Menu = {
+  text?: string;
+  sectionId?: string;
+}[]
+
+const DesktopNavBar = ({ headId, menu }: { headId: string, menu: Menu }) => {
+  const theme = useTheme();
+  return <Flex
+    top="0"
+    mt="0"
+    ml="5"
+    height="100%"
+    justifyContent="space-between"
+  >
+    <Box
+      width="230px"
+      height="56px"
+      marginTop="auto"
+      marginBottom="auto"
+      onClick={() => scrollToSection(headId)}
+      cursor="pointer"
+    >
+      <Image alt="sesja linuksowa" src={logo} />
+    </Box>
+    <Flex
+      marginBottom="auto"
+      marginTop="auto"
+      marginLeft="5%"
+      width="50%"
+      gap="10px"
+      minWidth="570px"
+      justifyContent="space-between"
+    >
+      {menu.map(({ text, sectionId }) => (
+        <Text
+          key={text}
+          textTransform="capitalize"
+          color="whiteAlpha.900"
+          fontSize={["sm", "sm", "lg", "xl"]}
+          cursor="pointer"
+          _hover={{ color: theme.colors.primary }}
+          height="30px"
+          onClick={() => sectionId && scrollToSection(sectionId)}
+        >
+          {text}
+        </Text>
+      ))}
+    </Flex>
+    <Lang />
+  </Flex>
+}
 
 const Burger = ({ headId }: { headId: string }) => {
   const { t } = useTranslation("common");

@@ -73,12 +73,14 @@ export default function Home() {
           rel="preload"
           as="font"
           href="/font/Montserrat-SemiBold.ttf"
+          crossOrigin="anonymous"
         ></link>
-        <link rel="preload" as="font" href="/font/Montserrat-Light.ttf"></link>
+        <link rel="preload" as="font" href="/font/Montserrat-Light.ttf" crossOrigin="anonymous"></link>
         <link
           rel="preload"
           as="font"
           href="/font/Montserrat-Regular.ttf"
+          crossOrigin="anonymous"
         ></link>
         <meta
           name="google-site-verification"
