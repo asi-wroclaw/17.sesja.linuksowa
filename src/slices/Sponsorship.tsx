@@ -8,6 +8,7 @@ import pwr from "../assets/loga/logo-pwr.png";
 import NextImage, { StaticImageData } from "next/image";
 import hswro from "../assets/loga/logo-hs.svg";
 import programistamag from "../assets/loga/logo-programistamag.jpg";
+import programmers from "../assets/loga/4programmers.svg";
 import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 
@@ -43,6 +44,7 @@ const Sponsorship = () => {
           width: isSmallerThan800 ? 180 : 270,
         },
         { image: programistamag, href: "https://programistamag.pl/" },
+        { image: programmers, href: "https://4programmers.net/" },
       ],
     },
     {
