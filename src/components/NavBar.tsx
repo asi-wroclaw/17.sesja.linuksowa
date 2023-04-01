@@ -79,12 +79,8 @@ const NavBar = () => {
         >
           <Image alt="sesja linuksowa" src={logo} />
         </Box>
-        {isBiggerThanLg && (
-          <DesktopNavBar menu={menu} head={headId} />
-        )}
-        {isSmallerThanLg && (
-          <MobileNavBar menu={menu} head={headId} />
-        )}
+        {isBiggerThanLg && <DesktopNavBar menu={menu} />}
+        {isSmallerThanLg && <MobileNavBar menu={menu} />}
       </Flex>
     </Box>
   );
@@ -96,64 +92,68 @@ type Menu = {
 }[];
 
 const MobileNavBar = ({ menu }: { menu: Menu }) => {
-  return <DarkMode>
-    <Menu>
-      <MenuButton
-        as={IconButton}
-        aria-label="Options"
-        icon={<HamburgerIcon color="#fff" />}
-        variant="outline"
-      />
-      <LightMode>
-        <MenuList>
-          {menu.map(({ text, sectionId }) => (
-            <MenuItem
-              key={text}
-              onClick={() => sectionId && scrollToSection(sectionId)}
-            >
-              {text}
+  return (
+    <DarkMode>
+      <Menu>
+        <MenuButton
+          as={IconButton}
+          aria-label="Options"
+          icon={<HamburgerIcon color="#fff" />}
+          variant="outline"
+        />
+        <LightMode>
+          <MenuList>
+            {menu.map(({ text, sectionId }) => (
+              <MenuItem
+                key={text}
+                onClick={() => sectionId && scrollToSection(sectionId)}
+              >
+                {text}
+              </MenuItem>
+            ))}
+            <MenuItem>
+              <Lang textColor="#000" />
             </MenuItem>
-          ))}
-          <MenuItem>
-            <Lang textColor="#000" />
-          </MenuItem>
-        </MenuList>
-      </LightMode>
-    </Menu>
-  </DarkMode>
-}
+          </MenuList>
+        </LightMode>
+      </Menu>
+    </DarkMode>
+  );
+};
 
 const DesktopNavBar = ({ menu }: { menu: Menu }) => {
   const theme = useTheme();
 
-  return <>
-    <Flex
-      marginBottom="auto"
-      marginTop="auto"
-      marginLeft="5%"
-      width="50%"
-      maxWidth="90vh"
-      gap="10px"
-      minWidth="570px"
-      justifyContent="space-between"
-    >
-      {menu.map(({ text, sectionId }) => (
-        <Text
-          key={text}
-          textTransform="capitalize"
-          color="whiteAlpha.900"
-          fontSize={["sm", "sm", "lg", "xl"]}
-          cursor="pointer"
-          _hover={{ color: theme.colors.primary }}
-          height="30px"
-          onClick={() => sectionId && scrollToSection(sectionId)}
-        >
-          {text}
-        </Text>
-      ))}
-    </Flex>
-    <Lang />
-  </>
-}
+  return (
+    <>
+      <Flex
+        marginBottom="auto"
+        marginTop="auto"
+        marginLeft="5%"
+        width="50%"
+        maxWidth="90vh"
+        gap="10px"
+        minWidth="570px"
+        justifyContent="space-between"
+      >
+        {menu.map(({ text, sectionId }) => (
+          <Text
+            key={text}
+            textTransform="capitalize"
+            color="whiteAlpha.900"
+            fontSize={["sm", "sm", "lg", "xl"]}
+            cursor="pointer"
+            _hover={{ color: theme.colors.primary }}
+            height="30px"
+            onClick={() => sectionId && scrollToSection(sectionId)}
+          >
+            {text}
+          </Text>
+        ))}
+      </Flex>
+      <Lang />
+    </>
+  );
+};
 
 export default NavBar;
