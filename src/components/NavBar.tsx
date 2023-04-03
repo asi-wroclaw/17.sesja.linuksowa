@@ -13,6 +13,7 @@ import {
   IconButton,
   LightMode,
 } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import logo from "../assets/logo-duze-pl.webp";
@@ -26,7 +27,6 @@ export const HEADER_HEIGHT = 60;
 
 const NavBarStyle: StyleProps = {
   height: `${HEADER_HEIGHT}px`,
-  bg: "#000000",
   position: "fixed",
   top: "0",
   width: "100%",
@@ -34,6 +34,7 @@ const NavBarStyle: StyleProps = {
 };
 
 const NavBar = () => {
+  const [bg, setBg] = useState<string>("rgba(0,0,0,0)");
   const theme = useTheme();
   const { t }: { t: (key: string) => string } = useTranslation("common");
   const headId = "head";
@@ -56,8 +57,22 @@ const NavBar = () => {
     { text: t("menu.sponsors"), sectionId: "sponsors" },
     { text: t("menu.contact"), sectionId: "contact" },
   ].filter(({ text }) => text);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 60) {
+      setBg("rgba(0,0,0,1)");
+    } else {
+      setBg("rgba(0,0,0,0)");
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <Box {...NavBarStyle}>
+    <Box {...NavBarStyle} backgroundColor={bg}>
       <Hide below="lg">
         <Flex
           top="0"
