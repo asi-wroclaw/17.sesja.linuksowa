@@ -3,7 +3,6 @@ import Image from "next/image";
 import pinguin from "../assets/bg_pingwin.webp";
 import { Stack, VStack, Heading } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
-import { Show } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
 import config from "../config";
 import { useTranslation } from "next-export-i18n";
