@@ -1,6 +1,6 @@
 import { Box, StyleProps } from "@chakra-ui/react";
 import Image from "next/image";
-import pinguin from "../assets/bg_pingwin.webp";
+import pinguin from "../assets/pinguin.svg";
 import { Stack, VStack, Heading } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
@@ -108,8 +108,14 @@ const HeadSlice = () => {
           maxWidth={{ base: "550px", lg: "700px" }}
           height={{ base: "20%", lg: "100vh" }}
           width={{ base: "30%", lg: "50%" }}
+          position="relative"
         >
-          <Image priority alt="pinguin" src={pinguin} />
+          <Image
+            priority
+            alt="pinguin"
+            src={pinguin}
+            fill
+          />
         </VStack>
         <HeadDescription />
       </Stack>

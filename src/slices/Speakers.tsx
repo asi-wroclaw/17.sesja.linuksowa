@@ -123,7 +123,6 @@ const SpeakerModal = ({
                   {descriptionText}
                 </Text>
               ))}
-              {/* <Text minWidth="300px">{description}</Text> */}
             </VStack>
           </ModalBody>
           <ModalFooter>
@@ -149,6 +148,7 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
           <Image
             alt={`${name} image`}
             fill
+            sizes="300px"
             style={{ objectFit: "cover", objectPosition: "top" }}
             src={image}
           />
