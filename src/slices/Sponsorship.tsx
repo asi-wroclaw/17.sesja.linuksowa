@@ -1,5 +1,5 @@
 import DefaultButton from "@/components/DefaultButton";
-import { Box, VStack, Center, Link, Heading } from "@chakra-ui/react";
+import { Box, VStack, Center, Link, Heading, Stack } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 import asi from "../assets/loga/logo-asi.png";
 import antmicro from "../assets/loga/logo_antmicro.svg";
@@ -9,6 +9,7 @@ import NextImage, { StaticImageData } from "next/image";
 import hswro from "../assets/loga/logo-hs.svg";
 import programistamag from "../assets/loga/logo-programistamag.jpg";
 import programmers from "../assets/loga/4programmers.svg";
+import linuxMagazine from "../assets/loga/logo-linux-mg.png";
 import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 
@@ -32,7 +33,7 @@ const Sponsorship = () => {
       title: t("sponsors"),
       logos: [
         { image: antmicro, href: "https://antmicro.com/" },
-        { image: mb, href: "https://www.masterborn.com/" },
+        { image: mb, href: "https://www.masterborn.com/" }
       ],
     },
     {
@@ -41,10 +42,11 @@ const Sponsorship = () => {
         {
           image: hswro,
           href: "https://www.hswro.org/",
-          width: isSmallerThan800 ? 180 : 270,
+          // width: isSmallerThan800 ? 180 : 270,
         },
         { image: programistamag, href: "https://programistamag.pl/" },
         { image: programmers, href: "https://4programmers.net/" },
+        { image: linuxMagazine, href:"https://linux-magazine.pl/" }
       ],
     },
     {
@@ -55,7 +57,7 @@ const Sponsorship = () => {
       ],
     },
   ] as SponsorshipEntity[];
-
+  console.log(sponsorsAndOrganizations)
   return (
     <Box
       id="sponsors"
@@ -120,7 +122,7 @@ const Sponsorship = () => {
               width="100%"
               minHeight="30vh"
             >
-              <VStack gap="100px" display="flex">
+              <VStack gap="60px" display="flex">
                 <Heading
                   zIndex="0"
                   fontWeight="bold"
@@ -130,21 +132,30 @@ const Sponsorship = () => {
                 >
                   {title}
                 </Heading>
-                {logos.map(({ image, href, width }) => (
-                  <Link
-                    maxWidth="min(70%, 400px)"
-                    key={href}
-                    isExternal
-                    href={href}
-                    target="_blank"
-                  >
-                    <NextImage
-                      alt={`${title} image`}
-                      width={width || undefined}
-                      src={image}
-                    />
-                  </Link>
-                ))}
+                <Stack
+                  direction="row"
+                  flexWrap="wrap"
+                  justifyContent="center"
+                  gap={{ base: "15px", md:"50px", lg: "50px" }}
+                  alignItems="center"
+                >
+                  {logos.map(({ image, href, width }) => (
+                    <Link
+                      flex="1 1 40%"
+                      maxWidth={{ base: "140px", md:"min(45%, 300px)", lg: "min(45%, 300px)" }}
+                      key={href}
+                      flexWrap="wrap"
+                      isExternal
+                      href={href}
+                      target="_blank"
+                    >
+                      <NextImage
+                        alt={`${title} image`}
+                        width={width || undefined}
+                        src={image}
+                      />
+                    </Link>
+                  ))}</Stack>
               </VStack>
             </Box>
           )}

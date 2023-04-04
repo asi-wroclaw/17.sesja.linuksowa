@@ -110,12 +110,7 @@ const HeadSlice = () => {
           width={{ base: "30%", lg: "50%" }}
           position="relative"
         >
-          <Image
-            priority
-            alt="pinguin"
-            src={pinguin}
-            fill
-          />
+          <Image priority alt="pinguin" src={pinguin} fill />
         </VStack>
         <HeadDescription />
       </Stack>
