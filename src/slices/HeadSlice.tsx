@@ -22,7 +22,13 @@ const Title = () => {
     <VStack>
       <Heading
         as="h1"
-        fontSize={{ base: "4xl", md: "7xl" }}
+        fontSize={{
+          base: "4xl",
+          md: "6xl",
+          lg: "6xl",
+          xl: "6xl",
+          "2xl": "7xl",
+        }}
         textAlign="center"
         fontWeight="semibold"
         color="white"

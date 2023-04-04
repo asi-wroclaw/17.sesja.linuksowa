@@ -33,7 +33,7 @@ const Sponsorship = () => {
       title: t("sponsors"),
       logos: [
         { image: antmicro, href: "https://antmicro.com/" },
-        { image: mb, href: "https://www.masterborn.com/" }
+        { image: mb, href: "https://www.masterborn.com/" },
       ],
     },
     {
@@ -42,11 +42,10 @@ const Sponsorship = () => {
         {
           image: hswro,
           href: "https://www.hswro.org/",
-          // width: isSmallerThan800 ? 180 : 270,
         },
         { image: programistamag, href: "https://programistamag.pl/" },
         { image: programmers, href: "https://4programmers.net/" },
-        { image: linuxMagazine, href:"https://linux-magazine.pl/" }
+        { image: linuxMagazine, href: "https://linux-magazine.pl/" },
       ],
     },
     {
@@ -57,7 +56,7 @@ const Sponsorship = () => {
       ],
     },
   ] as SponsorshipEntity[];
-  console.log(sponsorsAndOrganizations)
+
   return (
     <Box
       id="sponsors"
@@ -136,13 +135,17 @@ const Sponsorship = () => {
                   direction="row"
                   flexWrap="wrap"
                   justifyContent="center"
-                  gap={{ base: "15px", md:"50px", lg: "50px" }}
+                  gap={{ base: "15px", md: "50px", lg: "50px" }}
                   alignItems="center"
                 >
                   {logos.map(({ image, href, width }) => (
                     <Link
                       flex="1 1 40%"
-                      maxWidth={{ base: "140px", md:"min(45%, 300px)", lg: "min(45%, 300px)" }}
+                      maxWidth={{
+                        base: "140px",
+                        md: "min(45%, 300px)",
+                        lg: "min(45%, 300px)",
+                      }}
                       key={href}
                       flexWrap="wrap"
                       isExternal
@@ -155,7 +158,8 @@ const Sponsorship = () => {
                         src={image}
                       />
                     </Link>
-                  ))}</Stack>
+                  ))}
+                </Stack>
               </VStack>
             </Box>
           )}

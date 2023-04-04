@@ -97,8 +97,13 @@ export const SUNDAY_AGENDA = [
   {
     start: "10:00",
     end: "10:50",
-    title: "Szczegóły wkrótce",
-    author: "",
+    title: "Improve your shell experience in 3 simple steps",
+    author: "Maciej Sobkowski",
+    description: [
+      "If you work with the Linux command line interface on a regular basis and you want to learn how to use shell to increase your productivity, this presentation is for you!",
+      "",
+      "The command line interface in Linux and other related systems offer a set of highly capable tools that constitute some of the pillars of a programmer’s daily work. During this presentation, I will provide you with examples of useful applications and techniques and demonstrate how they can help you work within the console environment  in a more efficient way, as well as show how console tools make for an excellent development environment.",
+    ],
   },
   {
     start: "11:00",

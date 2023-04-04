@@ -213,7 +213,7 @@ const Speakers = ({ speakersData }: { speakersData: SpeakerProps[] }) => {
         maxW="1000px"
         padding="50px 20px 20px 20px"
         flexWrap="wrap"
-        justifyContent="space-around"
+        justifyContent="center"
         gap="30px 30px"
       >
         {speakersData
