@@ -10,7 +10,7 @@ import RJW from "./RJW.webp";
 import Pycinski from "./Pycinski.webp";
 import Dorosz from "./Dorosz.webp";
 import Opasiak from "./Opasiak.webp";
-import Sobkowski from './msobkowski.png';
+import Sobkowski from "./msobkowski.png";
 
 export const SPEAKERS: SpeakerProps[] = [
   {
@@ -166,6 +166,8 @@ export const SPEAKERS: SpeakerProps[] = [
       github: "",
     },
     name: "Maciej Sobkowski",
-    description: ["Maciej Sobkowski is a Senior Software Engineer at Antmicro, where he's been working for the last 5 years. His area of expertise includes embedded systems and kernel development, focusing on device drivers and the V4L2 framework in Linux. He has 8+ years of professional experience in developing low-level software using a multitude of free and open source projects including Linux, Zephyr, Android, OpenEmbedded and Buildroot."],
+    description: [
+      "Maciej Sobkowski is a Senior Software Engineer at Antmicro, where he's been working for the last 5 years. His area of expertise includes embedded systems and kernel development, focusing on device drivers and the V4L2 framework in Linux. He has 8+ years of professional experience in developing low-level software using a multitude of free and open source projects including Linux, Zephyr, Android, OpenEmbedded and Buildroot.",
+    ],
   },
 ];

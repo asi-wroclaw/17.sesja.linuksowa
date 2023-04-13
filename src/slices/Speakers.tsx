@@ -142,7 +142,11 @@ const Speaker = ({ image, urls, name, description }: SpeakerProps) => {
   const showSocials =
     urls.github || urls.linkedin || urls.twitter || urls.website;
   return (
-    <Flex zIndex="3" cursor="pointer" onClick={()=>description.length && onOpen()}>
+    <Flex
+      zIndex="3"
+      cursor="pointer"
+      onClick={() => description.length && onOpen()}
+    >
       <Box>
         <Box w={300} h={330} position="relative">
           <Image
