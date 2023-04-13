@@ -10,6 +10,7 @@ import RJW from "./RJW.webp";
 import Pycinski from "./Pycinski.webp";
 import Dorosz from "./Dorosz.webp";
 import Opasiak from "./Opasiak.webp";
+import Sobkowski from './msobkowski.png';
 
 export const SPEAKERS: SpeakerProps[] = [
   {
@@ -92,17 +93,6 @@ export const SPEAKERS: SpeakerProps[] = [
     ],
   },
   {
-    image: "",
-    urls: {
-      website: "",
-      twitter: "",
-      linkedin: "",
-      github: "",
-    },
-    name: "",
-    description: [""],
-  },
-  {
     image: CezaryDynak,
     urls: {
       website: "",
@@ -166,5 +156,16 @@ export const SPEAKERS: SpeakerProps[] = [
     description: [
       "15-letnie doświadczenie jako administrator systemów. Moje początki miały miejsce w czasach, gdy praca przy konsoli i fizycznych serwerach było standardem, a szum wentylatorów towarzyszył codziennym czynnościom. Obecnie staram się odnaleźć w świecie bujającym w chmurach i często podkreślam, że nie jest to uniwersalne rozwiązanie dla wszystkich problemów. Poza pracą lubię żeglować po morzach i oceanach oraz pracuję jako ratownik medyczny w Krakowskim Pogotowiu Ratunkowym.",
     ],
+  },
+  {
+    image: Sobkowski,
+    urls: {
+      website: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+    },
+    name: "Maciej Sobkowski",
+    description: ["Maciej Sobkowski is a Senior Software Engineer at Antmicro, where he's been working for the last 5 years. His area of expertise includes embedded systems and kernel development, focusing on device drivers and the V4L2 framework in Linux. He has 8+ years of professional experience in developing low-level software using a multitude of free and open source projects including Linux, Zephyr, Android, OpenEmbedded and Buildroot."],
   },
 ];
