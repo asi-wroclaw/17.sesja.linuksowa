@@ -16,12 +16,13 @@ export type SpeechItem = {
   title: string;
   author?: string;
   description?: string[];
+  lang?: ("en" | "pl")[];
 };
 
 const Speech = ({ speech }: { speech: SpeechItem }) => {
   const { isOpen, onToggle } = useDisclosure();
   const { t } = useTranslation("common");
-  const { start, end, title, author, description } = speech;
+  const { start, end, title, author, description, lang } = speech;
   const style = description ? { cursor: "pointer" } : {};
   const theme = useTheme();
   return (
@@ -50,6 +51,16 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
       <GridItem area="title" {...style}>
         <Text fontSize={["sm", "md", "xl", "2xl"]} color="whiteAlpha.900">
           {title}
+          {lang && (
+            <Text
+              fontSize={["xs", "sm", "md", "lg"]}
+              as="i"
+              color="whiteAlpha.700"
+            >
+              {" "}
+              [{lang.join("/")}]
+            </Text>
+          )}
         </Text>
       </GridItem>
       <GridItem rowSpan={2} colSpan={1}></GridItem>
