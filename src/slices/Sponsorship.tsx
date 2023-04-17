@@ -10,6 +10,7 @@ import hswro from "../assets/loga/logo-hs.svg";
 import programistamag from "../assets/loga/logo-programistamag.jpg";
 import programmers from "../assets/loga/4programmers.svg";
 import linuxMagazine from "../assets/loga/logo-linux-mg.png";
+import plug from "../assets/loga/plug.png";
 import { useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 
@@ -32,8 +33,8 @@ const Sponsorship = () => {
     {
       title: t("sponsors"),
       logos: [
-        { image: antmicro, href: "https://antmicro.com/" },
-        { image: mb, href: "https://www.masterborn.com/" },
+        { image: antmicro, href: "https://antmicro.com/", width: "300" },
+        { image: mb, href: "https://www.masterborn.com/", width: "300" },
       ],
     },
     {
@@ -42,17 +43,19 @@ const Sponsorship = () => {
         {
           image: hswro,
           href: "https://www.hswro.org/",
+          width: 200
         },
-        { image: programistamag, href: "https://programistamag.pl/" },
-        { image: programmers, href: "https://4programmers.net/" },
-        { image: linuxMagazine, href: "https://linux-magazine.pl/" },
+        { image: programistamag, href: "https://programistamag.pl/", width: "300" },
+        { image: programmers, href: "https://4programmers.net/", width: "300" },
+        { image: linuxMagazine, href: "https://linux-magazine.pl/", width: "200" },
+        { image: plug, href: "https://linux.org.pl/", width: "220" }
       ],
     },
     {
       title: t("organizers"),
       logos: [
-        { image: asi, href: "https://www.asi.wroclaw.pl/" },
-        { image: pwr, href: "https://pwr.edu.pl/" },
+        { image: asi, href: "https://www.asi.wroclaw.pl/", width: "300" },
+        { image: pwr, href: "https://pwr.edu.pl/", width: "300" },
       ],
     },
   ] as SponsorshipEntity[];
@@ -135,29 +138,33 @@ const Sponsorship = () => {
                   direction="row"
                   flexWrap="wrap"
                   justifyContent="center"
-                  gap={{ base: "15px", md: "50px", lg: "50px" }}
                   alignItems="center"
+                  marginLeft="10%"
+                  rowGap={{ base: "60px" }}
+                  marginRight="10%"
                 >
                   {logos.map(({ image, href, width }) => (
-                    <Link
-                      flex="1 1 40%"
-                      maxWidth={{
-                        base: "140px",
-                        md: "min(45%, 300px)",
-                        lg: "min(45%, 300px)",
-                      }}
-                      key={href}
+                    <Box key={href}
                       flexWrap="wrap"
-                      isExternal
-                      href={href}
-                      target="_blank"
+                      flexBasis={{ base: "100%", md: "45%", xl: "30%" }}
+                      margin="auto"
                     >
-                      <NextImage
-                        alt={`${title} image`}
-                        width={width || undefined}
-                        src={image}
-                      />
-                    </Link>
+                      <Link
+
+                        margin="auto"
+                        display="block"
+                        isExternal
+                        href={href}
+                        target="_blank"
+                      >
+                        <NextImage
+                          style={{ margin: "auto" }}
+                          alt={`${title} image`}
+                          width={width || undefined}
+                          src={image}
+                        />
+                      </Link>
+                    </Box>
                   ))}
                 </Stack>
               </VStack>
