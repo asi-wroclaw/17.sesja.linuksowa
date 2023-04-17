@@ -33,8 +33,8 @@ const Sponsorship = () => {
     {
       title: t("sponsors"),
       logos: [
-        { image: antmicro, href: "https://antmicro.com/", width: "300" },
-        { image: mb, href: "https://www.masterborn.com/", width: "300" },
+        { image: antmicro, href: "https://antmicro.com/", width: "350" },
+        { image: mb, href: "https://www.masterborn.com/", width: "350" },
       ],
     },
     {
@@ -43,12 +43,20 @@ const Sponsorship = () => {
         {
           image: hswro,
           href: "https://www.hswro.org/",
-          width: 200
+          width: 200,
         },
-        { image: programistamag, href: "https://programistamag.pl/", width: "300" },
+        {
+          image: programistamag,
+          href: "https://programistamag.pl/",
+          width: "300",
+        },
         { image: programmers, href: "https://4programmers.net/", width: "300" },
-        { image: linuxMagazine, href: "https://linux-magazine.pl/", width: "200" },
-        { image: plug, href: "https://linux.org.pl/", width: "220" }
+        {
+          image: linuxMagazine,
+          href: "https://linux-magazine.pl/",
+          width: "200",
+        },
+        { image: plug, href: "https://linux.org.pl/", width: "220" },
       ],
     },
     {
@@ -144,13 +152,13 @@ const Sponsorship = () => {
                   marginRight="10%"
                 >
                   {logos.map(({ image, href, width }) => (
-                    <Box key={href}
+                    <Box
+                      key={href}
                       flexWrap="wrap"
                       flexBasis={{ base: "100%", md: "45%", xl: "30%" }}
                       margin="auto"
                     >
                       <Link
-
                         margin="auto"
                         display="block"
                         isExternal
