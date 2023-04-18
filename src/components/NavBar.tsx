@@ -44,13 +44,13 @@ const Live = () => {
       target="_blank"
       margin="auto"
       _hover={{ textDecorationLine: "none" }}
-      top="6px"
+      top="10px"
       position="fixed"
       left={{ base: `${172 + 20}px`, md: `${172 + 50}px`, lg: `${230 + 50}px` }}
     >
       <DefaultButton
         _hover={{ color: "black" }}
-        size="lg"
+        size="md"
         text="LIVE"
         bg={theme.colors.red}
         paddingLeft={{ base: "12px", md: "24px" }}
@@ -70,7 +70,7 @@ const NavBar = () => {
   const { t }: { t: (key: string) => string } = useTranslation("common");
   const showLive = ["2023-04-21", "2023-04-22", "2023-04-23"].includes(
     new Date().toISOString().slice(0, 10)
-  );
+  ) || true;
   const headId = "head";
 
   const menu = [
