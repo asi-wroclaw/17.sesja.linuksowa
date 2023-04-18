@@ -70,7 +70,7 @@ const NavBar = () => {
   const { t }: { t: (key: string) => string } = useTranslation("common");
   const showLive = ["2023-04-21", "2023-04-22", "2023-04-23"].includes(
     new Date().toISOString().slice(0, 10)
-  ) || true;
+  );
   const headId = "head";
 
   const menu = [
