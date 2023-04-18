@@ -68,7 +68,7 @@ const NavBar = () => {
   const [isSmallerThanLg] = useMediaQuery("(max-width: 62em)");
   const [isBiggerThanLg] = useMediaQuery("(min-width: 62em)");
   const { t }: { t: (key: string) => string } = useTranslation("common");
-  const showLive = ["2023-04-22", "2023-04-23"].includes(
+  const showLive = ["2023-04-21", "2023-04-22", "2023-04-23"].includes(
     new Date().toISOString().slice(0, 10)
   );
   const headId = "head";
