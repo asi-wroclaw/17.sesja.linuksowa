@@ -10,6 +10,7 @@ import {
   MenuItem,
   IconButton,
   LightMode,
+  Link,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -21,6 +22,7 @@ import Lang from "@/components/Lang";
 import config from "../config";
 import scrollToSection from "@/utils/scrollToSection";
 import { useMediaQuery } from "@chakra-ui/react";
+import DefaultButton from "./DefaultButton";
 
 export const HEADER_HEIGHT = 60;
 
@@ -32,11 +34,43 @@ const NavBarStyle: StyleProps = {
   zIndex: "100",
 };
 
+const Live = () => {
+  const theme = useTheme();
+
+  return (
+    <Link
+      isExternal
+      href={"https://www.youtube.com/@pwrasi/streams"}
+      target="_blank"
+      margin="auto"
+      _hover={{ textDecorationLine: "none" }}
+      top="6px"
+      position="fixed"
+      left={{ base: `${172 + 20}px`, md: `${172 + 50}px`, lg: `${230 + 50}px` }}
+    >
+      <DefaultButton
+        _hover={{ color: "black" }}
+        size="lg"
+        text="LIVE"
+        bg={theme.colors.red}
+        paddingLeft={{ base: "12px", md: "24px" }}
+        paddingRight={{ base: "12px", md: "24px" }}
+        color="whiteAlpha.900"
+        type="submit"
+      />
+    </Link>
+  );
+};
+
 const NavBar = () => {
+  const theme = useTheme();
   const [bg, setBg] = useState<string>("rgba(0,0,0,0)");
   const [isSmallerThanLg] = useMediaQuery("(max-width: 62em)");
   const [isBiggerThanLg] = useMediaQuery("(min-width: 62em)");
   const { t }: { t: (key: string) => string } = useTranslation("common");
+  const showLive = ["2023-04-22", "2023-04-23"].includes(
+    new Date().toISOString().slice(0, 10)
+  );
   const headId = "head";
 
   const menu = [
@@ -88,10 +122,14 @@ const NavBar = () => {
           height={{ base: "42px", lg: "56px" }}
           marginTop="auto"
           marginBottom="auto"
-          onClick={() => scrollToSection(headId)}
           cursor="pointer"
         >
-          <Image alt="sesja linuksowa" src={logo} />
+          {showLive && <Live />}
+          <Image
+            onClick={() => scrollToSection(headId)}
+            alt="sesja linuksowa"
+            src={logo}
+          />
         </Box>
         {isBiggerThanLg && <DesktopNavBar menu={menu} />}
         {isSmallerThanLg && <MobileNavBar menu={menu} />}
@@ -152,6 +190,7 @@ const DesktopNavBar = ({ menu }: { menu: Menu }) => {
       >
         {menu.map(({ text, sectionId }) => (
           <Text
+            margin="auto"
             key={text}
             textTransform="capitalize"
             color="whiteAlpha.900"

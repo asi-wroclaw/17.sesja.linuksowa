@@ -7,6 +7,7 @@ const theme = extendTheme({
   colors: {
     primary: "#429096",
     secondary: "#6F2DBD",
+    red: "#ff0000",
   },
   fonts: {
     body: "MontserratSemiBold",
