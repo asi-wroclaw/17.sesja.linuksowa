@@ -9,7 +9,7 @@ import { useTranslation } from "next-export-i18n";
 import scrollToSection from "@/utils/scrollToSection";
 
 const HeadContainerStyle: StyleProps = {
-  height: "100vh",
+  height: "max(100vh,700px)",
   width: "100%",
   bg: "#000000",
 };

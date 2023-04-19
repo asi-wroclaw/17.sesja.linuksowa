@@ -74,13 +74,17 @@ const Sponsorship = () => {
       as="section"
       position="relative"
       width="100%"
-      minHeight={["50vh", "40vh"]}
+      minHeight={["max(50vh,300px)", "max(40vh,300px)"]}
       alignItems="center"
       justifyContent="center"
       margin="0"
       zIndex="2"
     >
-      <Box width="100%" height={["50vh", "40vh"]} position="absolute">
+      <Box
+        width="100%"
+        height={["max(50vh,300px)", "max(40vh,300px)"]}
+        position="absolute"
+      >
         <NextImage
           src="/bg_oferta.webp"
           alt="sponsorship background"
@@ -88,7 +92,7 @@ const Sponsorship = () => {
           fill
         />
       </Box>
-      <Center height={["50vh", "40vh"]}>
+      <Center height={["max(50vh,300px)", "max(40vh,300px)"]}>
         <VStack gap={3}>
           <Heading
             zIndex="0"
