@@ -15,7 +15,7 @@ export const SATURDAY_AGENDA: SpeechItem[] = [
   {
     start: "11:00",
     end: "11:50",
-    title: "Pliki poliglotycznych",
+    title: "Pliki poliglotyczne",
     author: "Tomasz Zieliński",
     lang: ["pl"],
     description: [
