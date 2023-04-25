@@ -55,6 +55,7 @@ const PreviousEdition = () => {
             <Link
               _hover={{ textDecorationLine: "none" }}
               href={content.previousEditionUrl}
+              target="_blank"
             >
               <DefaultButton
                 _hover={{ color: "black" }}
