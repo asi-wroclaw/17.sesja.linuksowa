@@ -108,7 +108,7 @@ export const SUNDAY_AGENDA: SpeechItem[] = [
     end: "10:50",
     title: "Improve your shell experience in 3 simple steps",
     author: "Maciej Sobkowski",
-    lang: ["en"],
+    lang: ["pl"],
     description: [
       "If you work with the Linux command line interface on a regular basis and you want to learn how to use shell to increase your productivity, this presentation is for you!",
       "",
