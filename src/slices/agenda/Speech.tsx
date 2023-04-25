@@ -5,6 +5,7 @@ import {
   Text,
   useDisclosure,
   Box,
+  Link,
 } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/react";
 import DefaultButton from "@/components/DefaultButton";
@@ -17,20 +18,20 @@ export type SpeechItem = {
   author?: string;
   description?: string[];
   lang?: ("en" | "pl")[];
+  recording?: string;
 };
 
 const Speech = ({ speech }: { speech: SpeechItem }) => {
   const { isOpen, onToggle } = useDisclosure();
   const { t } = useTranslation("common");
-  const { start, end, title, author, description, lang } = speech;
+  const { start, end, title, author, description, lang, recording } = speech;
   const style = description ? { cursor: "pointer" } : {};
   const theme = useTheme();
   return (
     <Grid
-      onClick={() => description && onToggle()}
       templateAreas={`"time title b"
                       "space title b"
-                      "space author author"`}
+                      "space author yt"`}
       gridTemplateColumns={[
         "85px 1fr auto",
         "100px 1fr auto",
@@ -43,12 +44,16 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
       paddingTop={3}
       borderBottom={`0.25rem ${theme.colors.primary} solid`}
     >
-      <GridItem area="time">
+      <GridItem area="time" onClick={() => description && onToggle()}>
         <Text fontSize={["sm", "md", "xl", "2xl"]} color="whiteAlpha.900">
           {start}-{end}
         </Text>
       </GridItem>
-      <GridItem area="title" {...style}>
+      <GridItem
+        area="title"
+        {...style}
+        onClick={() => description && onToggle()}
+      >
         <Text fontSize={["sm", "md", "xl", "2xl"]} color="whiteAlpha.900">
           {title}
           {lang && (
@@ -64,13 +69,18 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
         </Text>
       </GridItem>
       <GridItem rowSpan={2} colSpan={1}></GridItem>
-      <GridItem area="author" {...style}>
+      <GridItem
+        area="author"
+        {...style}
+        onClick={() => description && onToggle()}
+      >
         <Text fontSize={["sm", "md", "xl", "2xl"]} color="whiteAlpha.900">
           {author}
         </Text>
       </GridItem>
       {description && (
         <GridItem
+          onClick={() => description && onToggle()}
           gridArea="b"
           minWidth={["60px", "60px", "74px", "90px"]}
           display="flex"
@@ -78,10 +88,36 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
           <DefaultButton
             marginLeft="auto"
             textTransform="uppercase"
-            size={["xs", "xs", "sm", "md"]}
+            size={["xs", "xs", "xs", "sm"]}
             _hover={{ color: "black" }}
             text={isOpen ? "less" : "more"}
+            marginBottom="2px"
           />
+        </GridItem>
+      )}
+      {recording && (
+        <GridItem
+          gridArea="yt"
+          minWidth={["60px", "60px", "74px", "90px"]}
+          display="flex"
+        >
+          <Link
+            isExternal
+            href={recording}
+            target="_blank"
+            margin="auto"
+            _hover={{ textDecorationLine: "none" }}
+          >
+            <DefaultButton
+              marginTop="2px"
+              marginLeft="auto"
+              bg={theme.colors.red}
+              textTransform="uppercase"
+              size={["xs", "xs", "xs", "sm"]}
+              _hover={{ color: "black" }}
+              text="nagranie"
+            />
+          </Link>
         </GridItem>
       )}
       <Collapse in={isOpen} animateOpacity style={{ gridColumn: "2/span 3" }}>
