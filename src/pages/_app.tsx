@@ -1,46 +1,17 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
-
-const theme = extendTheme({
-  colors: {
-    primary: "#429096",
-    secondary: "#6F2DBD",
-    red: "#ff0000",
-  },
-  fonts: {
-    body: "MontserratSemiBold",
-    heading: "MontserratSemiBold",
-  },
-  // breakpoints: {
-  //   sm: '30em',
-  //   md: '48em',
-  //   lg: '62em',
-  //   xl: '80em',
-  //   '2xl': '96em',
-  // }
-  // fontSizes: {
-  //   xs: "0.75rem",
-  //   sm: "0.875rem",
-  //   md: "1rem",
-  //   lg: "1.125rem",
-  //   xl: "1.25rem",
-  //   "2xl": "1.5rem",
-  //   "3xl": "1.875rem",
-  //   "4xl": "2.25rem",
-  //   "5xl": "3rem",
-  //   "6xl": "3.75rem",
-  //   "7xl": "4.5rem",
-  //   "8xl": "6rem",
-  //   "9xl": "8rem",
-  // },
-});
+import { Provider } from '@/components/ui/provider';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Head>
+        <title>17. Sesja Linuksowa</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Provider forcedTheme="light">
+        <Component {...pageProps} />
+      </Provider>
+    </>
   );
 }
