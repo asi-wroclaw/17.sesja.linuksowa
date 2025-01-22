@@ -7,7 +7,7 @@ import { SpotDescription } from './SpotDescription';
 import { Title } from './Title';
 
 export const HeadDescription = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
   return (
     <VStack
       height="inherit"
