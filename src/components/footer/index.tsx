@@ -12,24 +12,24 @@ const CodeOfConduct = () => {
 
   return (
     <Center
-      id="coc"
+      id="footer"
       as="section"
       display="flex"
       justifyContent="center"
       width="100%"
       bg={'primary'}
       minHeight="10vh"
-      position="relative"
-      zIndex="2"
-      color="whiteAlpha.900"
-      fontSize={['xl', '2xl']}
+      color="white"
+      fontSize={['lg', '2xl']}
       textAlign="center"
       paddingLeft={4}
     >
-      {content.cocText}
-      <Link href={content.cocLink} target="_blank" padding={2}>
-        <Text as="u">{content.cocButtonText}</Text>
-      </Link>
+      <Text>
+        {content.cocText}
+        <Link href={content.cocLink} target="_blank" padding={2}>
+          <Text as="u">{content.cocButtonText}</Text>
+        </Link>
+      </Text>
     </Center>
   );
 };

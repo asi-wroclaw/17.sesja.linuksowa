@@ -20,17 +20,17 @@ const Item = ({ imageSrc, title, text }: ImageItemProps) => {
         src={imageSrc}
       />
       <Heading
-        color="whiteAlpha.900"
+        color="white"
         fontWeight="bold"
         as="h4"
-        size="4xl"
+        size={['3xl', '4xl']}
         lineHeight="1.2"
         textAlign="center"
         lineClamp={[1, 2]}
       >
         {title}
       </Heading>
-      <Text textAlign="center" color="whiteAlpha.900">
+      <Text textAlign="center" color="white" fontSize="md">
         {text}
       </Text>
     </VStack>

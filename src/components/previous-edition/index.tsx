@@ -21,13 +21,11 @@ const PreviousEdition = () => {
     <Box
       id="previous"
       as="section"
-      position="relative"
-      zIndex="2"
-      marginBottom={'4em'}
+      pb={'4em'}
       display="flex"
       width="100%"
       bg="white"
-      minHeight="70vh"
+      minHeight="60vh"
       alignItems="center"
       justifyContent="center"
     >

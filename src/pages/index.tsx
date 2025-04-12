@@ -1,7 +1,7 @@
 import AboutUs from '@/components/about-us';
 import Agenda from '@/components/agenda';
 import CallForPapers from '@/components/call-for-papers';
-import CodeOfConduct from '@/components/code-of-conduct';
+import CodeOfConduct from '@/components/footer';
 import ParticlesBackground from '@/components/common/ParticlesBackground';
 import Hero from '@/components/hero';
 import MapSection from '@/components/map-section';
@@ -14,6 +14,12 @@ import config from '@/config';
 export default function Page() {
   return (
     <main>
+      {/* this is needed when we want to mititage FOUC (flash of unstyled content) */}
+      <style>{`
+        body {
+          background-color: rgba(0,0,0,0.92);
+        }
+      `}</style>
       <Navbar />
       <Hero />
       <AboutUs />
