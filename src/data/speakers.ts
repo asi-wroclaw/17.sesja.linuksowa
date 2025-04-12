@@ -73,15 +73,15 @@ export const SPEAKERS: SpeakerProps[] = [
   {
     image: Vovcia,
     urls: {},
-    name: `Vladimir Mitiouchev`,
+    name: 'Vladimir Mitiouchev',
     description: [
-      `Vladimir "vovcia" Mitiouchev - Systems architect, Python developer, współzałożyciel fundacji CLUG.`,
+      'Vladimir "vovcia" Mitiouchev - Systems architect, Python developer, współzałożyciel fundacji CLUG.',
     ],
   },
   {
     image: Siewca,
     urls: {},
-    name: `Jakub "Siewca" Juszczakiewicz`,
+    name: 'Jakub "Siewca" Juszczakiewicz',
     description: [
       'Pasjonat Linuksa i Otwartego oprogramowania. Zawodowo sysadmin i programista niskopoziomowy - aktualnie podwykonawca w jednej z wiodących firm telekomunikacyjnych. Prywatnie m.in. zapalony żeglarz jachtowy, jeździec konny i fotograf, jak również miłośnik gór.',
     ],
@@ -89,7 +89,7 @@ export const SPEAKERS: SpeakerProps[] = [
   {
     image: Mewp,
     urls: {},
-    name: `Błażej Święcicki`,
+    name: 'Błażej Święcicki',
     description: [
       'Błażej Święcicki - pan maruda, niszczyciel dobrej zabawy, pogromca uśmiechów dzieci — innymi słowy, urodzony sysadmin. Technologiczny perfekcjonista, wiecznie głoszący zalety niszowych rozwiązań nad popularnymi. Uzależniony od NixOSa, inne dystrybucje straciły dla niego sens.',
     ],
@@ -97,7 +97,7 @@ export const SPEAKERS: SpeakerProps[] = [
   {
     image: Pycinski,
     urls: {},
-    name: `Piotr Pyciński`,
+    name: 'Piotr Pyciński',
     description: [
       '15-letnie doświadczenie jako administrator systemów. Moje początki miały miejsce w czasach, gdy praca przy konsoli i fizycznych serwerach było standardem, a szum wentylatorów towarzyszył codziennym czynnościom. Obecnie staram się odnaleźć w świecie bujającym w chmurach i często podkreślam, że nie jest to uniwersalne rozwiązanie dla wszystkich problemów. Poza pracą lubię żeglować po morzach i oceanach oraz pracuję jako ratownik medyczny w Krakowskim Pogotowiu Ratunkowym.',
     ],
