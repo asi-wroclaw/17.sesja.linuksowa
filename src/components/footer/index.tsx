@@ -1,7 +1,7 @@
 import { Center, Link, Text } from '@chakra-ui/react';
 import { useTranslation } from 'next-export-i18n';
 
-const CodeOfConduct = () => {
+const Footer = () => {
   const { t } = useTranslation();
 
   const content = {
@@ -34,4 +34,4 @@ const CodeOfConduct = () => {
   );
 };
 
-export default CodeOfConduct;
+export default Footer;

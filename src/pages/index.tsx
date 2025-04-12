@@ -1,7 +1,7 @@
 import AboutUs from '@/components/about-us';
 import Agenda from '@/components/agenda';
 import CallForPapers from '@/components/call-for-papers';
-import CodeOfConduct from '@/components/footer';
+import Footer from '@/components/footer';
 import ParticlesBackground from '@/components/common/ParticlesBackground';
 import Hero from '@/components/hero';
 import MapSection from '@/components/map-section';
@@ -29,7 +29,7 @@ export default function Page() {
       <PreviousEdition />
       <MapSection />
       <Sponsorship />
-      <CodeOfConduct />
+      <Footer />
       <ParticlesBackground />
     </main>
   );
