@@ -1,5 +1,4 @@
 import DefaultButton from '@/components/common/DefaultButton';
-import type { SpeechItem } from '@/data/agenda';
 import {
   Box,
   Collapsible,
@@ -10,6 +9,7 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
+import type { SpeechItem } from './types';
 
 const Speech = ({ speech }: { speech: SpeechItem }) => {
   const { open, onToggle } = useDisclosure();
@@ -122,7 +122,7 @@ const Speech = ({ speech }: { speech: SpeechItem }) => {
               <Text
                 fontSize={['sm', 'sm', 'lg', 'xl']}
                 key={`${descriptionText}-${
-                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                  // biome-ignore lint/suspicious/noArrayIndexKey: false positive
                   index
                 }`}
                 minH="15px"

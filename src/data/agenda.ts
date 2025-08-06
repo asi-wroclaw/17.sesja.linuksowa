@@ -1,12 +1,4 @@
-export type SpeechItem = {
-  start: string;
-  end: string;
-  title: string;
-  author?: string;
-  description?: string[];
-  lang?: ('en' | 'pl')[];
-  recording?: string;
-};
+import type { SpeechItem } from '@/components/agenda/types';
 
 export const SATURDAY_AGENDA: SpeechItem[] = [
   {

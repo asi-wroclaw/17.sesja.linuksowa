@@ -1,4 +1,3 @@
-import DefaultButton from '@/components/common/DefaultButton';
 import { Button } from '@/components/ui/button';
 import config from '@/config';
 import { Stack, VStack } from '@chakra-ui/react';
