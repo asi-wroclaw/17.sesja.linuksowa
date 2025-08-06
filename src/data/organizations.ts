@@ -2,10 +2,10 @@ import programmers from '@/assets/logo/4programmers.svg';
 import antmicro from '@/assets/logo/antmicro.svg';
 import asi from '@/assets/logo/asi-logo-trans.svg';
 import hswro from '@/assets/logo/hswro.svg';
-import linuxMagazine from '@/assets/logo/linux-magazine.png';
+import linuxMagazine from '@/assets/logo/linux-magazine.webp';
 import mb from '@/assets/logo/masterborn.svg';
 import plug from '@/assets/logo/plug.png';
-import programistamag from '@/assets/logo/programistamag.jpg';
+import programistamag from '@/assets/logo/programistamag.webp';
 import pwr from '@/assets/logo/pwr.png';
 import type { SponsorshipEntity } from '@/components/sponsorship/types';
 
